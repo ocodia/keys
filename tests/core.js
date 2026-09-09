@@ -57,10 +57,11 @@ export async function runCore(report=()=>{}){
     equal(progressionChords('D','pop').map(c=>c.label),['D','A','Bm','G']);
   });
   test('Storage repairs malformed state and survives unavailable persistence',()=>{
+    equal(sanitize().monitor,true);equal(sanitize({monitor:false}).monitor,false);
     const s=sanitize({root:'<script>',volume:999,tempo:-4,mode:'tuner',inversion:8,quality:'major',filter:[0,0,99,'C'],saved:[{root:'C',id:'pop'},{root:'bad',id:'pop'}]});
     equal(s.root,'C');equal(s.volume,100);equal(s.tempo,40);equal(s.inversion,2);equal(s.mode,'notes');equal(s.filter,[0]);equal(s.saved.length,1);
     const bad=new Store({getItem:()=>'{oops',setItem:()=>{throw Error();}});equal(bad.state.root,'C');bad.update({root:'D'});equal(bad.state.root,'D');equal(bad.available,false);
-    let saved='';const memory={getItem:()=>saved,setItem:(k,v)=>{saved=v;}};const first=new Store(memory);first.update({root:'F',stats:{correct:4,total:10,sessions:1}});equal(new Store(memory).state.root,'F');equal(new Store(memory).state.stats.correct,4);
+    let saved='';const memory={getItem:()=>saved,setItem:(k,v)=>{saved=v;}};const first=new Store(memory);first.update({root:'F',lastMidiInput:{id:'piano',name:'Keys MIDI',manufacturer:'Test'},stats:{correct:4,total:10,sessions:1}});equal(new Store(memory).state.root,'F');equal(new Store(memory).state.stats.correct,4);equal(new Store(memory).state.lastMidiInput.id,'piano');equal(sanitize({lastMidiInput:{id:5}}).lastMidiInput,null);
   });
   test('MIDI normalisation: note-off, velocity zero, sustain and panic',()=>{
     equal(decodeMidi([0x91,60,0]).type,'note-off');equal(decodeMidi([0x80,60,99]).type,'note-off');equal(decodeMidi([0xb0,64,127]).down,true);
@@ -87,6 +88,26 @@ export async function runCore(report=()=>{}){
     const chord=makeQuestions('chord',()=>0)[0];assert(evaluate(chord,[60,64,67,72]));assert(!evaluate(chord,[60,64,67,71]));
     const inversion=makeQuestions('inversion',()=>0)[0];assert(evaluate(inversion,inversion.expected));assert(!evaluate(inversion,inversion.expected.map(n=>n+12)));
     const quiz=new QuizSession('find',[find,find]);quiz.submit([60]);quiz.submit([60]);equal(quiz.results.length,1);quiz.next();quiz.submit([],true);equal(quiz.score,1);quiz.next();assert(quiz.complete);equal(quiz.results[1].revealed,true);
+  });
+  test('MIDI auto-connect is silent, restores the saved input and handles hot replug',async()=>{
+    const remembered={id:'notes',name:'My piano MIDI',manufacturer:'Test'},router=new InputRouter();
+    let requests=0;const port={...remembered,state:'connected'},other={id:'other',name:'Other MIDI',state:'connected'};
+    const access={inputs:new Map([['other',other],['notes',port]])};
+    const nav={permissions:{query:async()=>({state:'granted'})},requestMIDIAccess:async()=>{requests++;return access;}};
+    const midi=new MidiInput(router,nav,remembered);assert(await midi.autoConnect());equal(midi.port.id,'notes');equal(requests,1);
+    port.onmidimessage({data:[0x90,60,90],timeStamp:1});port.state='disconnected';access.onstatechange();equal(router.held,[]);equal(midi.lastInput,remembered);assert(!midi.port);
+    port.state='connected';access.onstatechange();equal(midi.port.id,'notes');
+    midi.select('');access.onstatechange();assert(!midi.port);equal(midi.lastInput,null);
+    for(const state of ['prompt','denied']){requests=0;const blocked=new MidiInput(router,{...nav,permissions:{query:async()=>({state})}},remembered);assert(!await blocked.autoConnect());equal(requests,0);}
+    requests=0;assert(!await new MidiInput(router,nav).autoConnect());equal(requests,0);
+  });
+  test('MIDI auto-connect waits for the remembered device instead of switching keyboards',async()=>{
+    const remembered={id:'old-id',name:'Saved piano',manufacturer:'Test'},r=new InputRouter();
+    const access={inputs:new Map([['other',{id:'other',name:'Other MIDI',state:'connected'}]])};
+    const nav={permissions:{query:async()=>({state:'granted'})},requestMIDIAccess:async()=>access};
+    const midi=new MidiInput(r,nav,remembered);assert(!await midi.autoConnect());assert(!midi.port);
+    const returned={...remembered,id:'new-id',state:'connected'};access.inputs.set(returned.id,returned);access.onstatechange();equal(midi.port.id,'new-id');equal(midi.lastInput.id,'new-id');
+    const unsupported=new MidiInput(r,{...nav,permissions:{query:async()=>{throw Error('Unsupported permission descriptor');}}},remembered);assert(!await unsupported.autoConnect());
   });
   test('Audio pitch and cancellation before an AudioContext resumes',async()=>{
     equal(midiToFrequency(69),440);let resume;

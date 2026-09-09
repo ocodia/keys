@@ -12,6 +12,11 @@ const savedStorage=app.store.storage;app.store.storage={getItem:()=>snapshot,set
 // synthesiser is exercised separately by manual playback and core lifecycle tests.
 app.audio.sequence=async()=>{};app.audio.on=async()=>{};
 const test=async(name,run)=>{try{await run();report({name,passed:true});}catch(e){report({name,passed:false,error:e.message});}};
+await test('MIDI settings are hidden until opened and do not occupy practice space',async()=>{
+  const dialog=app.querySelector('dialog.midi-panel');assert(!dialog.open);equal(dialog.getBoundingClientRect().height,0);
+  await app.action('midi-settings');assert(dialog.open);equal(dialog.getAttribute('aria-labelledby'),'midi-title');assert(dialog.contains(doc.activeElement));
+  await app.action('close-midi');assert(!dialog.open);equal(dialog.getBoundingClientRect().height,0);
+});
 await test('Every registered feature renders its controls and meaningful content',async()=>{
   for(const f of FEATURES){await app.action('mode',{value:f.id});assert(app.querySelector(f.tag));assert(app.querySelector('#details').textContent.trim().length>20);equal(app.querySelectorAll('.nav-item.active').length,1);}
 });

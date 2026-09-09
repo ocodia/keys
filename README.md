@@ -29,9 +29,11 @@ Pointer/touch plays notes; in Identifier and Quiz it also toggles selections. Ar
 
 ## MIDI and audio
 
-Connect a USB MIDI keyboard, click **Connect MIDI**, grant browser MIDI permission, and choose an input. Chrome/Edge on Windows is the primary supported setup. Browsers without Web MIDI keep all onscreen tools available. MIDI access requires localhost or HTTPS; no SysEx or MIDI output is requested.
+Connect a USB MIDI keyboard, open **MIDI** in the header, click **Connect keyboard**, grant browser MIDI permission, and choose an input. Settings and connection details stay in a modal; the header shows a compact connected indicator. Chrome/Edge on Windows is the primary supported setup. Browsers without Web MIDI keep all onscreen tools available. MIDI access requires localhost or HTTPS; no SysEx or MIDI output is requested.
 
-MIDI monitoring defaults off for digital pianos with their own speakers. Enable **Play MIDI notes through Keys** for a silent controller. Velocity, note-off, sustain CC64 and device disconnection are handled. Keys uses a small additive piano-like synthesiser, not acoustic piano samples. Sound begins after a click/tap. Stop, tab hiding, focus loss and input-device changes release all sound.
+**Play MIDI notes through Keys** defaults on. Your saved on/off choice is preserved; turn it off for digital pianos with their own speakers if you hear doubled notes. Keys remembers the last selected input and automatically restores it when permission is already granted. If it is missing, Keys waits for it instead of silently switching to another keyboard. Unplug/replug reconnects the remembered device. Deselecting the input clears the remembered selection. Browsers without MIDI permission querying require a manual connection.
+
+Velocity, note-off, sustain CC64 and device disconnection are handled. Keys uses a small additive piano-like synthesiser, not acoustic piano samples. Automatic MIDI connection cannot bypass browser autoplay rules: click anywhere in Keys to unlock sound, or use **Enable sound** when shown. Stop, tab hiding, focus loss and input-device changes release all sound.
 
 If connected but silent, choose the keyboard's main **MIDI** input, not **MCU/HUI**, **DAW**, **ALV** or **DIN THRU**. Keys prefers a note-playing port automatically. **Test sound** checks browser output independently of the keyboard; the input indicator shows the most recent note received. Connect MIDI, enabling monitoring, and Test sound unlock browser audio through a user gesture.
 

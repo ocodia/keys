@@ -8,11 +8,11 @@ import {details,escape} from './panels.js';
 import './keyboard.js';
 export class KeysApp extends HTMLElement {
   connectedCallback(){
-    this.store=new Store();this.audio=new PianoAudio();this.input=new InputRouter();this.midi=new MidiInput(this.input);
+    this.store=new Store();this.audio=new PianoAudio();this.input=new InputRouter();this.midi=new MidiInput(this.input,navigator,this.store.state.lastMidiInput);
     this.selection=new Set();this.playing=[];this.quiz=null;this.focusChord=null;this.answerSource='onscreen';
     this.innerHTML=`<aside class="sidebar"><a class="brand" href="./" aria-label="Keys home"><span class="brand-icon" aria-hidden="true">▥</span>keys<span class="brand-dot">.</span></a><span class="brand-caption">YOUR PIANO COMPANION</span><nav aria-label="Learning tools">${['Explore','Harmony','Practise'].map(g=>`<p class="nav-group">${g}</p>${FEATURES.filter(f=>f.group===g).map(f=>`<button class="nav-item" data-action="mode" data-value="${f.id}"><span aria-hidden="true">${f.icon}</span>${f.label}</button>`).join('')}`).join('')}</nav><div class="sidebar-foot"><span class="status-dot"></span> A little practice, every day.</div></aside>
-    <main><header class="topbar"><span>YOUR PRACTICE SPACE</span><div class="topbar-actions"><button data-action="install" hidden>Install Keys</button><button data-action="theme" aria-label="Toggle light and dark theme">☼ <span id="theme-label">Light</span></button><button data-action="connect" id="connect-midi">♧ Connect MIDI</button></div></header>
-    <section class="midi-panel" hidden><div id="midi-status" role="status"></div><label class="field" style="margin-top:12px"><span>MIDI input</span><select id="midi-device" aria-label="MIDI input"><option value="">Choose an input</option></select></label><p class="small" id="midi-port-hint"></p><label class="check"><input type="checkbox" data-field="monitor" id="midi-monitor">Play MIDI notes through Keys</label><p class="small">Leave monitoring off if your piano already makes sound.</p><div class="button-row"><button data-action="test-sound">▶ Test sound</button><span id="midi-activity" class="small" role="status">Waiting for a note…</span></div><p class="small" id="audio-status" role="status"></p></section>
+    <main><header class="topbar"><span>YOUR PRACTICE SPACE</span><div class="topbar-actions"><button data-action="install" hidden>Install Keys</button><button data-action="theme" aria-label="Toggle light and dark theme">☼ <span id="theme-label">Light</span></button><button data-action="enable-sound" id="enable-midi-sound" hidden>Enable sound</button><button data-action="midi-settings" id="connect-midi" aria-haspopup="dialog" aria-label="MIDI settings">♧ MIDI</button></div></header>
+    <dialog class="midi-panel" aria-labelledby="midi-title"><div class="modal-heading"><div><p class="eyebrow">YOUR KEYBOARD</p><h2 id="midi-title">MIDI settings</h2></div><button data-action="close-midi" aria-label="Close MIDI settings" autofocus>×</button></div><div id="midi-status" role="status">Connect your keyboard to play.</div><label class="field" style="margin-top:18px"><span>MIDI input</span><select id="midi-device" aria-label="MIDI input"><option value="">Choose an input</option></select></label><p class="small" id="midi-port-hint"></p><button data-action="connect" class="primary">Connect keyboard</button><label class="check"><input type="checkbox" data-field="monitor" id="midi-monitor">Play MIDI notes through Keys</label><p class="small">Turn this off if your piano already makes sound.</p><div class="button-row"><button data-action="test-sound">▶ Test sound</button><span id="midi-activity" class="small" role="status">Waiting for a note…</span></div><p class="small" id="audio-status" role="status"></p><p class="small modal-footnote">Keys remembers this input and reconnects automatically when browser permission allows.</p><button data-action="close-midi" class="primary modal-done">Done</button></dialog>
     <div id="update-notice" class="notice" hidden>A new version is ready.<button data-action="update">Update when ready</button></div>
     <div id="message" class="notice" role="status" hidden></div><section class="page-heading"><p class="eyebrow" id="breadcrumb"></p><h1></h1><p id="description"></p></section>
     <div class="workspace"><section class="controls-card" id="controls" aria-label="Tool settings"></section><div class="instrument-column"><section class="instrument-card"><div class="instrument-head"><div><p class="eyebrow">THE KEYBOARD</p><h2 id="keyboard-title">A little room to explore</h2></div><span class="badge" id="range-badge">2 OCTAVES</span></div>
@@ -21,6 +21,8 @@ export class KeysApp extends HTMLElement {
     <div class="instrument-tools transport"><button data-action="stop">■ Stop</button><button data-action="mute" id="mute" aria-label="Mute sound">Sound on</button><label>Volume <input data-field="volume" type="range" min="0" max="100" aria-label="Volume"></label><label>Tempo <input data-field="tempo" type="number" min="40" max="180" step="1" aria-label="Tempo in beats per minute" class="tempo-input"> BPM</label><span class="keyboard-meta" id="visible-range"></span></div></section>
     <div class="below-keyboard"><section class="detail-card" id="details"></section></div></div></div><footer class="footer"><span>KEYS · A SPACE TO LEARN</span><span id="offline-status">Local first. Just you and the piano.</span></footer></main>`;
     this.keyboard=this.querySelector('piano-keyboard');
+    this.midiDialog=this.querySelector('dialog');
+    this.midiDialog.addEventListener('click',e=>{if(e.target!==this.midiDialog)return;const r=this.midiDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)this.midiDialog.close();});
     this.addEventListener('click',e=>{const button=e.target.closest('[data-action]');if(button&&!button.disabled)this.action(button.dataset.action,button.dataset).catch(error=>this.message(error.message));});
     this.addEventListener('change',e=>{
       if(e.target.id==='midi-device'){if(this.state.monitor)this.unlockAudio();this.midi.select(e.target.value);return;}
@@ -32,16 +34,21 @@ export class KeysApp extends HTMLElement {
     this.addEventListener('piano-input',e=>this.input.accept(e.detail));
     this.store.addEventListener('change',()=>this.render());
     this.input.addEventListener('input',e=>this.onInput(e.detail));
-    this.midi.addEventListener('change',()=>this.renderMidi());
+    this.midi.addEventListener('change',()=>{
+      if(JSON.stringify(this.state.lastMidiInput)!==JSON.stringify(this.midi.lastInput))this.store.update({lastMidiInput:this.midi.lastInput});
+      this.renderMidi();
+    });
     this.audio.onHighlight=notes=>{this.playing=notes;this.refreshKeyboard();};
     this.audio.onError=e=>this.message(e.message);
     this.onVisibility=()=>{if(document.hidden)this.input.stop();};this.onBlur=()=>this.input.stop();
     document.addEventListener('visibilitychange',this.onVisibility);window.addEventListener('blur',this.onBlur);
     this.onInstall=e=>{e.preventDefault();this.installPrompt=e;this.querySelector('[data-action=install]').hidden=false;};
     window.addEventListener('beforeinstallprompt',this.onInstall);
-    this.render();this.setupOffline();this.registerTools();
+    this.onAudioGesture=()=>{if(this.midi.port&&this.state.monitor&&this.audio.context?.state!=='running')this.unlockAudio();};
+    document.addEventListener('pointerdown',this.onAudioGesture);document.addEventListener('keydown',this.onAudioGesture);
+    this.render();this.setupOffline();this.registerTools();this.midi.autoConnect();
   }
-  disconnectedCallback(){this.input.stop();document.removeEventListener('visibilitychange',this.onVisibility);window.removeEventListener('blur',this.onBlur);window.removeEventListener('beforeinstallprompt',this.onInstall);this.toolLifecycle?.abort();}
+  disconnectedCallback(){this.input.stop();document.removeEventListener('visibilitychange',this.onVisibility);document.removeEventListener('pointerdown',this.onAudioGesture);document.removeEventListener('keydown',this.onAudioGesture);window.removeEventListener('blur',this.onBlur);window.removeEventListener('beforeinstallprompt',this.onInstall);if(this.midi.port)this.midi.port.onmidimessage=null;if(this.midi.access)this.midi.access.onstatechange=null;this.toolLifecycle?.abort();}
   get state(){return this.store.state;}
   get selected(){return this.answerSource==='midi'?this.input.held:[...this.selection].sort((a,b)=>a-b);}
   update(patch){
@@ -68,6 +75,7 @@ export class KeysApp extends HTMLElement {
     this.querySelector('[data-action=octave-down]').disabled=s.overview||s.viewStart<=24;
     this.querySelector('[data-action=octave-up]').disabled=s.overview||s.viewStart>=84;
     this.audio.settings(s.volume,s.muted);this.refreshKeyboard();this.renderDetails();
+    this.renderAudioPrompt();
     if(focusedField)this.querySelector(`[data-field="${focusedField}"]`)?.focus({preventScroll:true});
     if(!this.store.available)this.message('Browser storage is unavailable. You can keep practising, but changes may not be saved.');
   }
@@ -141,7 +149,10 @@ export class KeysApp extends HTMLElement {
       case 'mode':this.update({mode:d.value});break;
       case 'theme':this.update({theme:s.theme==='dark'?'light':'dark'});break;
       case 'mute':this.update({muted:!s.muted});break;
-      case 'connect':this.querySelector('.midi-panel').hidden=false;this.unlockAudio();await this.midi.connect();break;
+      case 'midi-settings':this.midiDialog.showModal();break;
+      case 'close-midi':this.midiDialog.close();break;
+      case 'connect':this.unlockAudio();await this.midi.connect();break;
+      case 'enable-sound':await this.unlockAudio();break;
       case 'test-sound':this.store.update({muted:false,volume:s.volume||65});await this.unlockAudio();await this.play([60,64,67]);break;
       case 'overview':this.update({overview:!s.overview});break;
       case 'octave-down':this.update({viewStart:s.viewStart-12});break;
@@ -179,17 +190,21 @@ export class KeysApp extends HTMLElement {
   }
   renderMidi(){
     this.querySelector('#midi-status').textContent=this.midi.status;
-    this.querySelector('#connect-midi').textContent=this.midi.port?'● MIDI connected':'♧ Connect MIDI';
+    this.querySelector('#connect-midi').textContent=this.midi.port?'● MIDI':'♧ MIDI';
+    this.querySelector('#connect-midi').classList.toggle('midi-connected',Boolean(this.midi.port));
+    this.querySelector('#connect-midi').setAttribute('aria-label',this.midi.port?'MIDI settings, connected':'MIDI settings');
     const select=this.querySelector('#midi-device');select.innerHTML='<option value="">Choose an input</option>';
     for(const port of this.midi.devices){const option=document.createElement('option');option.value=port.id;option.textContent=port.name||'MIDI keyboard';select.append(option);}
     select.value=this.midi.port?.id||'';
     this.querySelector('#midi-port-hint').textContent=isControlPort(this.midi.port?.name)?'This looks like a control-surface port. For piano keys, choose the main MIDI port instead of MCU/HUI, DAW, ALV or DIN THRU.':'';
     this.querySelector('#midi-activity').textContent='Waiting for a note…';
+    this.renderAudioPrompt();
   }
+  renderAudioPrompt(){this.querySelector('#enable-midi-sound').hidden=!(this.midi.port&&this.state.monitor&&this.audio.context?.state!=='running');}
   async unlockAudio(){
     const status=this.querySelector('#audio-status');
     status.textContent='Starting sound…';
-    try{await this.audio.ready();status.textContent='Sound ready. MIDI notes play when monitoring is enabled.';}
+    try{await this.audio.ready();status.textContent='Sound ready. MIDI notes play when monitoring is enabled.';this.renderAudioPrompt();}
     catch(error){status.textContent=error.message;}
   }
   message(text){const el=this.querySelector('#message');el.textContent=text;el.hidden=!text;}

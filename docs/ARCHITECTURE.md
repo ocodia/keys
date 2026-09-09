@@ -37,4 +37,4 @@ Optional feature-detected WebMCP tools configure the visible explorer and read i
 
 ## Compatibility and data
 
-No Axe source, storage migration or server API is required. The schema key is `keys:v1`; unknown properties are discarded. Current storage is device-local and contains only settings, saved progression presets and aggregate counts. No device permission or AudioContext is created on page load.
+No Axe source, storage migration or server API is required. The schema key is `keys:v1`; unknown properties are discarded. Current storage is device-local and contains settings, the last MIDI input's ID/name/manufacturer, saved progression presets and aggregate counts. On load, MIDI access is restored only when a remembered input exists and the Permissions API reports `granted`; loading never prompts for new permission. Match the saved ID first, then an unambiguous name/manufacturer pair if IDs changed. Hot-unplug retains the preference; explicit deselection clears it. Audio starts through user interaction, separately from automatic MIDI reconnection.

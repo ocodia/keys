@@ -2,8 +2,8 @@
 
 ## Verified in this implementation
 
-- 13/13 core test groups passed under Node.
-- 21/21 core + browser test groups passed in the Chromium-based in-app browser, including a fresh cache/origin run.
+- 15/15 core test groups passed under Node, including remembered MIDI input, permission-gated auto-connect, missing devices and hot replug.
+- 24/24 core + browser test groups passed in the Chromium-based in-app browser, including a fresh cache/origin run and modal visibility/focus checks. Escape closing was also verified through browser controls.
 - Desktop rendering and first-inversion playback were exercised through real browser controls. The 390px iframe layout passed the overflow and piano-scroll checks.
 - The app was reloaded and Scales opened successfully with its separate test server stopped. The main preview server stayed running.
 - A waiting service-worker update was applied through the visible update action and loaded the new shell.
@@ -14,7 +14,7 @@ Dedicated Chrome/Edge installation checks, physical mobile devices, multitouch a
 
 ## Automated core suite
 
-Run `node tests/run.js` (modern Node with ES modules and CustomEvent). Thirteen groups exercise:
+Run `node tests/run.js` (modern Node with ES modules and CustomEvent). Fifteen groups exercise:
 
 - 88-key geometry and middle C, floating-point geometry tolerance.
 - Every scale and chord spelling in every supported root, including E#, B# and double flats.
@@ -34,7 +34,7 @@ The 390px/desktop preview buttons provide a visual fixture. The automated mobile
 
 ## Manual release checklist
 
-- Fresh load starts in Notes, dark theme, C root, visible note labels, MIDI disconnected. Visit all ten tools.
+- A first visit starts in Notes, dark theme, C root, visible note labels, MIDI disconnected and monitoring enabled. A return visit reconnects the last input only with existing permission. Visit all ten tools.
 - Play white/black keys using a pointer, two touch pointers and Space/Enter. Release, change focus and hide the tab; no note stays stuck.
 - Compare C major root position/first inversion; audition scales both ways, arpeggios and a progression; Stop cancels the whole sequence. Change volume/mute.
 - Use a real USB keyboard in Windows Chrome and Edge. Verify device selection, permission denial/retry, velocity, three-note chords, pedal sustain/release, monitor off/on, repeated notes and unplug/replug. Verify quiz answers use held keys, not sustained tails.
