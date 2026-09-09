@@ -1,0 +1,16 @@
+{
+  "id":"./",
+  "name":"Keys — Piano Companion",
+  "short_name":"Keys",
+  "description":"A local-first piano companion for notes, scales, chords and daily practice.",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#101512",
+  "theme_color":"#141917",
+  "icons":[
+    {"src":"./icons/keys-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/keys-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/keys.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
+}
