@@ -57,7 +57,8 @@ export async function runCore(report=()=>{}){
     equal(progressionChords('D','pop').map(c=>c.label),['D','A','Bm','G']);
   });
   test('Storage repairs malformed state and survives unavailable persistence',()=>{
-    equal(sanitize().monitor,true);equal(sanitize({monitor:false}).monitor,false);
+    equal(sanitize().monitor,true);equal(sanitize({monitor:false}).monitor,false);equal(sanitize().navCollapsed,true);equal(sanitize({navCollapsed:false}).navCollapsed,false);
+    equal(sanitize({overview:true}).keyCount,88);equal(sanitize({keyCount:49,viewStart:84}).viewStart,60);equal(sanitize({keyCount:61,viewStart:84}).viewStart,48);equal(sanitize({keyCount:99}).keyCount,25);
     const s=sanitize({root:'<script>',volume:999,tempo:-4,mode:'tuner',inversion:8,quality:'major',filter:[0,0,99,'C'],saved:[{root:'C',id:'pop'},{root:'bad',id:'pop'}]});
     equal(s.root,'C');equal(s.volume,100);equal(s.tempo,40);equal(s.inversion,2);equal(s.mode,'notes');equal(s.filter,[0]);equal(s.saved.length,1);
     const bad=new Store({getItem:()=>'{oops',setItem:()=>{throw Error();}});equal(bad.state.root,'C');bad.update({root:'D'});equal(bad.state.root,'D');equal(bad.available,false);

@@ -14,7 +14,9 @@ Open **http://127.0.0.1:8765/** in Chrome or Edge. `npm run serve` is an optiona
 
 ## Explore and practise
 
-- **Notes:** find pitch classes across a two-octave keyboard; navigate octaves or scroll the full 88-key range.
+The keyboard spans the available workspace, with compact tool controls above it. Use the menu button beside **Keys** to show/hide navigation; your preference is remembered. Navigation starts collapsed. Optional explanations are under **Guide**. Both light and dark themes use a restrained instrument-panel layout.
+
+- **Notes:** choose a two-octave, 49-, 61- or 88-key view. The 49-key view starts at C2–C6; 61 keys spans C2–C7. Octave arrows shift the smaller views within the piano's range; the 88-key view covers A0–C8. Your view is remembered.
 - **Scales:** all 12 roots, contextual note spelling, interval labels, major/minor variants, pentatonic, blues, chromatic and major-scale modes. Classical melodic minor uses natural minor descending.
 - **Chords & inversions:** triads, suspended chords, common sevenths, all inversions, optional left-hand root, and voicing/all-tone highlights.
 - **Arpeggios:** one or two octaves, up or down, in the chosen inversion and register.
@@ -39,7 +41,7 @@ If connected but silent, choose the keyboard's main **MIDI** input, not **MCU/HU
 
 ## Install and offline use
 
-Wait for **Ready for offline practice** after the first load. Install using the browser's install control or Keys' Install button when offered. Every runtime asset, including sounds (synthesised in code), is available offline. New versions wait for **Update when ready**; an update stops sound and reloads the app, so finish a quiz first.
+Allow the first load to finish before going offline. Install using the browser's install control or Keys' Install button when offered. Every runtime asset, including sounds (synthesised in code), is available offline. New versions wait for **Update when ready**; an update stops sound and reloads the app, so finish a quiz first.
 
 Preferences, saved progressions and aggregate quiz statistics are stored under `keys:v1` in browser local storage. Active notes, connections and unfinished quizzes are not persisted. Clearing browser site data removes saved progress. No telemetry is collected.
 

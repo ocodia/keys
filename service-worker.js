@@ -1,5 +1,5 @@
 const CACHE_PREFIX = `keys-${self.registration.scope}-`;
-const CACHE_NAME = `${CACHE_PREFIX}v6`;
+const CACHE_NAME = `${CACHE_PREFIX}v9`;
 const ASSETS = ['./','./index.html','./styles.css','./app.js','./theory.js','./feature-registry.js','./storage.js','./keyboard.js','./panels.js','./audio-service.js','./input-service.js','./quiz.js','./manifest.webmanifest','./icons/keys.svg','./icons/keys-192.png','./icons/keys-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{

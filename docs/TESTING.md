@@ -3,7 +3,7 @@
 ## Verified in this implementation
 
 - 15/15 core test groups passed under Node, including remembered MIDI input, permission-gated auto-connect, missing devices and hot replug.
-- 24/24 core + browser test groups passed in the Chromium-based in-app browser, including a fresh cache/origin run and modal visibility/focus checks. Escape closing was also verified through browser controls.
+- 26/26 core + browser test groups passed in the Chromium-based in-app browser, including a fresh cache/origin run, navigation collapse/keyboard width, 49/61-key ranges and octave limits, mobile overflow and modal visibility/focus checks. Escape closing was also verified through browser controls.
 - Desktop rendering and first-inversion playback were exercised through real browser controls. The 390px iframe layout passed the overflow and piano-scroll checks.
 - The app was reloaded and Scales opened successfully with its separate test server stopped. The main preview server stayed running.
 - A waiting service-worker update was applied through the visible update action and loaded the new shell.

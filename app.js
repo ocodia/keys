@@ -4,22 +4,22 @@ import {SCALES,CHORDS,ROOTS,mod,pitchClass,noteName,pretty,rootAt,patternNames,i
 import {PianoAudio} from './audio-service.js';
 import {InputRouter,MidiInput,isControlPort} from './input-service.js';
 import {QuizSession} from './quiz.js';
-import {details,escape} from './panels.js';
+import {details} from './panels.js';
 import './keyboard.js';
 export class KeysApp extends HTMLElement {
   connectedCallback(){
     this.store=new Store();this.audio=new PianoAudio();this.input=new InputRouter();this.midi=new MidiInput(this.input,navigator,this.store.state.lastMidiInput);
     this.selection=new Set();this.playing=[];this.quiz=null;this.focusChord=null;this.answerSource='onscreen';
-    this.innerHTML=`<aside class="sidebar"><a class="brand" href="./" aria-label="Keys home"><span class="brand-icon" aria-hidden="true">▥</span>keys<span class="brand-dot">.</span></a><span class="brand-caption">YOUR PIANO COMPANION</span><nav aria-label="Learning tools">${['Explore','Harmony','Practise'].map(g=>`<p class="nav-group">${g}</p>${FEATURES.filter(f=>f.group===g).map(f=>`<button class="nav-item" data-action="mode" data-value="${f.id}"><span aria-hidden="true">${f.icon}</span>${f.label}</button>`).join('')}`).join('')}</nav><div class="sidebar-foot"><span class="status-dot"></span> A little practice, every day.</div></aside>
-    <main><header class="topbar"><span>YOUR PRACTICE SPACE</span><div class="topbar-actions"><button data-action="install" hidden>Install Keys</button><button data-action="theme" aria-label="Toggle light and dark theme">☼ <span id="theme-label">Light</span></button><button data-action="enable-sound" id="enable-midi-sound" hidden>Enable sound</button><button data-action="midi-settings" id="connect-midi" aria-haspopup="dialog" aria-label="MIDI settings">♧ MIDI</button></div></header>
+    this.innerHTML=`<aside class="sidebar" id="navigation" aria-label="Navigation"><nav aria-label="Learning tools">${['Explore','Harmony','Practise'].map(g=>`<p class="nav-group">${g}</p>${FEATURES.filter(f=>f.group===g).map(f=>`<button class="nav-item" data-action="mode" data-value="${f.id}">${f.label}</button>`).join('')}`).join('')}</nav></aside>
+    <main><header class="topbar"><div class="topbar-leading"><button data-action="toggle-nav" id="nav-toggle" aria-controls="navigation" aria-expanded="false" aria-label="Show navigation">☰</button><a class="brand" href="./">Keys</a></div><div class="topbar-actions"><button data-action="install" hidden>Install</button><button data-action="theme" aria-label="Toggle light and dark theme"><span id="theme-label">Light</span></button><button data-action="enable-sound" id="enable-midi-sound" hidden>Enable sound</button><button data-action="midi-settings" id="connect-midi" aria-haspopup="dialog" aria-label="MIDI settings">MIDI</button></div></header>
     <dialog class="midi-panel" aria-labelledby="midi-title"><div class="modal-heading"><div><p class="eyebrow">YOUR KEYBOARD</p><h2 id="midi-title">MIDI settings</h2></div><button data-action="close-midi" aria-label="Close MIDI settings" autofocus>×</button></div><div id="midi-status" role="status">Connect your keyboard to play.</div><label class="field" style="margin-top:18px"><span>MIDI input</span><select id="midi-device" aria-label="MIDI input"><option value="">Choose an input</option></select></label><p class="small" id="midi-port-hint"></p><button data-action="connect" class="primary">Connect keyboard</button><label class="check"><input type="checkbox" data-field="monitor" id="midi-monitor">Play MIDI notes through Keys</label><p class="small">Turn this off if your piano already makes sound.</p><div class="button-row"><button data-action="test-sound">▶ Test sound</button><span id="midi-activity" class="small" role="status">Waiting for a note…</span></div><p class="small" id="audio-status" role="status"></p><p class="small modal-footnote">Keys remembers this input and reconnects automatically when browser permission allows.</p><button data-action="close-midi" class="primary modal-done">Done</button></dialog>
     <div id="update-notice" class="notice" hidden>A new version is ready.<button data-action="update">Update when ready</button></div>
-    <div id="message" class="notice" role="status" hidden></div><section class="page-heading"><p class="eyebrow" id="breadcrumb"></p><h1></h1><p id="description"></p></section>
-    <div class="workspace"><section class="controls-card" id="controls" aria-label="Tool settings"></section><div class="instrument-column"><section class="instrument-card"><div class="instrument-head"><div><p class="eyebrow">THE KEYBOARD</p><h2 id="keyboard-title">A little room to explore</h2></div><span class="badge" id="range-badge">2 OCTAVES</span></div>
-    <div class="instrument-tools"><button data-action="octave-down" aria-label="View lower octave">←</button><button data-action="octave-up" aria-label="View higher octave">→</button><button data-action="overview" id="overview">88 keys</button><label>Labels <select data-field="labels" aria-label="Key labels"><option value="notes">Notes</option><option value="intervals">Intervals</option><option value="none">Hidden</option></select></label><label><select data-field="accidental" aria-label="Accidental display"><option value="sharps">♯ Sharps</option><option value="flats">♭ Flats</option></select></label></div>
-    <piano-keyboard></piano-keyboard><div class="keyboard-footer"><span><span style="color:var(--accent)">●</span> Root / target &nbsp; <span style="color:var(--gold)">●</span> Your notes</span><span id="keyboard-hint">Click a key to play · Arrow keys to move</span></div>
+    <div id="message" class="notice" role="status" hidden></div><section class="page-heading"><h1></h1></section>
+    <div class="workspace"><section class="controls-card" id="controls" aria-label="Tool settings"></section><div class="instrument-column"><section class="instrument-card">
+    <div class="instrument-tools"><button data-action="octave-down" aria-label="View lower octave">←</button><button data-action="octave-up" aria-label="View higher octave">→</button><label>View <select id="overview" data-field="keyCount" aria-label="Keyboard view"><option value="25">2 octaves</option><option value="49">49 keys</option><option value="61">61 keys</option><option value="88">88 keys</option></select></label><label>Labels <select data-field="labels" aria-label="Key labels"><option value="notes">Notes</option><option value="intervals">Intervals</option><option value="none">Hidden</option></select></label><label><select data-field="accidental" aria-label="Accidental display"><option value="sharps">♯ Sharps</option><option value="flats">♭ Flats</option></select></label></div>
+    <piano-keyboard></piano-keyboard><div class="keyboard-footer"><span><span style="color:#b6c88e">●</span> Root / target &nbsp; <span style="color:var(--gold)">●</span> Your notes</span><span id="keyboard-hint">Click a key to play · Arrow keys to move</span></div>
     <div class="instrument-tools transport"><button data-action="stop">■ Stop</button><button data-action="mute" id="mute" aria-label="Mute sound">Sound on</button><label>Volume <input data-field="volume" type="range" min="0" max="100" aria-label="Volume"></label><label>Tempo <input data-field="tempo" type="number" min="40" max="180" step="1" aria-label="Tempo in beats per minute" class="tempo-input"> BPM</label><span class="keyboard-meta" id="visible-range"></span></div></section>
-    <div class="below-keyboard"><section class="detail-card" id="details"></section></div></div></div><footer class="footer"><span>KEYS · A SPACE TO LEARN</span><span id="offline-status">Local first. Just you and the piano.</span></footer></main>`;
+    <div class="below-keyboard"><section class="detail-card" id="details"></section></div></div></div></main>`;
     this.keyboard=this.querySelector('piano-keyboard');
     this.midiDialog=this.querySelector('dialog');
     this.midiDialog.addEventListener('click',e=>{if(e.target!==this.midiDialog)return;const r=this.midiDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)this.midiDialog.close();});
@@ -27,7 +27,7 @@ export class KeysApp extends HTMLElement {
     this.addEventListener('change',e=>{
       if(e.target.id==='midi-device'){if(this.state.monitor)this.unlockAudio();this.midi.select(e.target.value);return;}
       const field=e.target.dataset.field;if(!field)return;
-      const value=e.target.type==='checkbox'?e.target.checked:['anchor','inversion','octaves','volume','tempo'].includes(field)?Number(e.target.value):e.target.value;
+      const value=e.target.type==='checkbox'?e.target.checked:['anchor','inversion','octaves','volume','tempo','keyCount'].includes(field)?Number(e.target.value):e.target.value;
       if(field==='monitor'&&value)this.unlockAudio();
       this.update({[field]:value});
     });
@@ -52,28 +52,32 @@ export class KeysApp extends HTMLElement {
   get state(){return this.store.state;}
   get selected(){return this.answerSource==='midi'?this.input.held:[...this.selection].sort((a,b)=>a-b);}
   update(patch){
-    if(!Object.keys(patch).every(k=>['volume','muted','theme'].includes(k))){this.input.stop();this.focusChord=null;}
+    if(!Object.keys(patch).every(k=>['volume','muted','theme','navCollapsed'].includes(k))){this.input.stop();this.focusChord=null;}
     if(patch.mode||patch.quizType){this.selection.clear();this.quiz=null;this.answerSource='onscreen';}
     if((patch.mode==='positions'||this.state.mode==='positions')&&!['C','G','D','A','E','F'].includes(patch.root||this.state.root))patch.root='C';
+    if(patch.keyCount!==undefined)patch.viewStart=patch.keyCount===25?48:36;
     if(patch.anchor!==undefined)patch.viewStart=Math.max(24,Math.min(84,patch.anchor-12));
     this.store.update(patch);
   }
   render(){
     const focusedField=document.activeElement?.dataset?.field;
     const s=this.state,f=FEATURES.find(f=>f.id===s.mode);
-    document.documentElement.dataset.theme=s.theme;document.querySelector('meta[name=theme-color]').content=s.theme==='dark'?'#141917':'#f4f6f1';
+    document.documentElement.dataset.theme=s.theme;document.querySelector('meta[name=theme-color]').content=s.theme==='dark'?'#202120':'#eeefeb';
     this.querySelector('#theme-label').textContent=s.theme==='dark'?'Light':'Dark';
     for(const b of this.querySelectorAll('.nav-item')){b.classList.toggle('active',b.dataset.value===s.mode);b.setAttribute('aria-current',b.dataset.value===s.mode?'page':'false');}
-    this.querySelector('#breadcrumb').textContent=`${f.group.toUpperCase()} / ${f.label.toUpperCase()}`;
-    this.querySelector('h1').innerHTML=`${escape(f.title)}<span>.</span>`;this.querySelector('#description').textContent=f.description;
+    this.querySelector('h1').textContent=f.label;
+    this.classList.toggle('nav-collapsed',s.navCollapsed);
+    this.querySelector('#navigation').hidden=s.navCollapsed;
+    this.querySelector('#nav-toggle').setAttribute('aria-expanded',String(!s.navCollapsed));
+    this.querySelector('#nav-toggle').setAttribute('aria-label',s.navCollapsed?'Show navigation':'Hide navigation');
     const controls=this.querySelector('#controls');if(controls.firstElementChild?.tagName.toLowerCase()!==f.tag)controls.innerHTML=`<${f.tag}></${f.tag}>`;
     controls.firstElementChild.configure(s,{quiz:this.quiz});
     for(const field of ['labels','accidental','volume','tempo'])this.querySelector(`.instrument-card [data-field=${field}]`).value=s[field];
     this.querySelector('#midi-monitor').checked=s.monitor;
     this.querySelector('#mute').textContent=s.muted?'Sound off':'Sound on';this.querySelector('#mute').setAttribute('aria-pressed',String(s.muted));
-    this.querySelector('#overview').textContent=s.overview?'2 octaves':'88 keys';
-    this.querySelector('[data-action=octave-down]').disabled=s.overview||s.viewStart<=24;
-    this.querySelector('[data-action=octave-up]').disabled=s.overview||s.viewStart>=84;
+    this.querySelector('[data-field=keyCount]').value=s.keyCount;
+    this.querySelector('[data-action=octave-down]').disabled=s.keyCount===88||s.viewStart<=24;
+    this.querySelector('[data-action=octave-up]').disabled=s.keyCount===88||s.viewStart>=109-s.keyCount;
     this.audio.settings(s.volume,s.muted);this.refreshKeyboard();this.renderDetails();
     this.renderAudioPrompt();
     if(focusedField)this.querySelector(`[data-field="${focusedField}"]`)?.focus({preventScroll:true});
@@ -97,14 +101,12 @@ export class KeysApp extends HTMLElement {
   }
   refreshKeyboard(){
     if(!this.keyboard)return;const s=this.state,context=this.musicalContext();
-    const start=s.overview?21:s.viewStart,end=s.overview?108:Math.min(108,start+24);
+    const start=s.keyCount===88?21:s.viewStart,end=start+s.keyCount-1;
     const hide=s.mode==='quiz'&&this.quiz&&!this.quiz.complete&&!this.quiz.answered;
     this.keyboard.configure({...context,start,end,labels:hide?'none':s.labels,accidental:s.accidental,selected:this.selected,sounding:[...this.input.sounding,...this.playing],held:this.input.held});
     this.querySelector('#visible-range').textContent=`${noteName(start,s.accidental,true)} – ${noteName(end,s.accidental,true)}`;
-    this.querySelector('#range-badge').textContent=s.overview?'88 KEYS':'2 OCTAVES';
     const outside=context.notes.filter(n=>n<start||n>end).length;
-    this.querySelector('#keyboard-title').textContent=s.mode==='notes'?'A little room to explore':s.mode==='quiz'?'Your turn at the keyboard':s.mode==='identifier'?'Follow your ear':`${pretty(s.root)} · ${FEATURES.find(f=>f.id===s.mode).label}`;
-    this.querySelector('#keyboard-hint').textContent=outside?`${outside} target notes outside view · use arrows or 88 keys`:(s.mode==='identifier'||s.mode==='quiz')?'Tap keys to select · Clear to start again':'Click a key to play · Arrow keys to move';
+    const hint=this.querySelector('#keyboard-hint');hint.textContent=outside?`${outside} notes outside view`:'';hint.hidden=!outside;
   }
   renderDetails(){this.querySelector('#details').innerHTML=details(this.state,{...this.musicalContext(),selected:this.selected,quiz:this.quiz,focusChord:this.focusChord});}
   onInput(e){
@@ -147,6 +149,7 @@ export class KeysApp extends HTMLElement {
     const s=this.state;
     switch(action){
       case 'mode':this.update({mode:d.value});break;
+      case 'toggle-nav':this.update({navCollapsed:!s.navCollapsed});this.querySelector('#nav-toggle').focus({preventScroll:true});break;
       case 'theme':this.update({theme:s.theme==='dark'?'light':'dark'});break;
       case 'mute':this.update({muted:!s.muted});break;
       case 'midi-settings':this.midiDialog.showModal();break;
@@ -154,7 +157,6 @@ export class KeysApp extends HTMLElement {
       case 'connect':this.unlockAudio();await this.midi.connect();break;
       case 'enable-sound':await this.unlockAudio();break;
       case 'test-sound':this.store.update({muted:false,volume:s.volume||65});await this.unlockAudio();await this.play([60,64,67]);break;
-      case 'overview':this.update({overview:!s.overview});break;
       case 'octave-down':this.update({viewStart:s.viewStart-12});break;
       case 'octave-up':this.update({viewStart:s.viewStart+12});break;
       case 'filter':{const n=Number(d.value);this.update({filter:s.filter.includes(n)?s.filter.filter(v=>v!==n):[...s.filter,n]});break;}
@@ -182,7 +184,7 @@ export class KeysApp extends HTMLElement {
     }
   }
   quizViewStart(){const q=this.quiz?.current;return q?.type==='inversion'?Math.max(24,Math.min(84,Math.floor(q.expected[0]/12)*12)):48;}
-  startQuiz(questions){this.input.stop();this.quiz=new QuizSession(this.state.quizType,questions);this.selection.clear();this.answerSource='onscreen';this.store.update({viewStart:this.quizViewStart(),overview:false});}
+  startQuiz(questions){this.input.stop();this.quiz=new QuizSession(this.state.quizType,questions);this.selection.clear();this.answerSource='onscreen';this.store.update({viewStart:this.quizViewStart(),keyCount:25});}
   submitQuiz(notes,reveal=false){
     if(!this.quiz||this.quiz.complete||this.quiz.answered)return;
     const result=this.quiz.submit(notes,reveal),stats=this.state.stats;
@@ -190,7 +192,7 @@ export class KeysApp extends HTMLElement {
   }
   renderMidi(){
     this.querySelector('#midi-status').textContent=this.midi.status;
-    this.querySelector('#connect-midi').textContent=this.midi.port?'● MIDI':'♧ MIDI';
+    this.querySelector('#connect-midi').textContent=this.midi.port?'● MIDI':'MIDI';
     this.querySelector('#connect-midi').classList.toggle('midi-connected',Boolean(this.midi.port));
     this.querySelector('#connect-midi').setAttribute('aria-label',this.midi.port?'MIDI settings, connected':'MIDI settings');
     const select=this.querySelector('#midi-device');select.innerHTML='<option value="">Choose an input</option>';
@@ -214,9 +216,9 @@ export class KeysApp extends HTMLElement {
       const registration=await navigator.serviceWorker.register('./service-worker.js');
       const ready=()=>{if(registration.waiting&&navigator.serviceWorker.controller){this.waitingWorker=registration.waiting;this.querySelector('#update-notice').hidden=false;}};
       ready();registration.addEventListener('updatefound',()=>{registration.installing?.addEventListener('statechange',ready);});
-      let reloading=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(this.waitingWorker&&!reloading){reloading=true;location.reload();}});
-      await navigator.serviceWorker.ready;this.querySelector('#offline-status').textContent='Ready for offline practice · Saved on this device';
-    }catch{this.querySelector('#offline-status').textContent='Offline setup unavailable · Open over localhost or HTTPS';}
+      let reloading=false;const wasControlled=Boolean(navigator.serviceWorker.controller);navigator.serviceWorker.addEventListener('controllerchange',()=>{if((wasControlled||this.waitingWorker)&&!reloading){reloading=true;location.reload();}});
+      await navigator.serviceWorker.ready;
+    }catch{this.message('Offline setup unavailable. Use localhost or HTTPS.');}
   }
   registerTools(){
     if(!document.modelContext?.registerTool)return;

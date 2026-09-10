@@ -12,6 +12,15 @@ const savedStorage=app.store.storage;app.store.storage={getItem:()=>snapshot,set
 // synthesiser is exercised separately by manual playback and core lifecycle tests.
 app.audio.sequence=async()=>{};app.audio.on=async()=>{};
 const test=async(name,run)=>{try{await run();report({name,passed:true});}catch(e){report({name,passed:false,error:e.message});}};
+await test('Navigation toggles without changing practice state or narrowing the keyboard with controls',async()=>{
+  app.store.update({navCollapsed:true});const mode=app.state.mode;
+  assert(app.querySelector('#navigation').hidden);equal(app.querySelector('#nav-toggle').getAttribute('aria-expanded'),'false');
+  const full=app.keyboard.getBoundingClientRect().width;
+  await app.action('toggle-nav');assert(!app.querySelector('#navigation').hidden);equal(app.querySelector('#nav-toggle').getAttribute('aria-expanded'),'true');
+  assert(app.keyboard.getBoundingClientRect().width<full);equal(app.state.mode,mode);
+  await app.action('toggle-nav');equal(app.keyboard.getBoundingClientRect().width,full);
+  assert(!app.querySelector('.footer'));assert(!app.querySelector('#offline-status'));
+});
 await test('MIDI settings are hidden until opened and do not occupy practice space',async()=>{
   const dialog=app.querySelector('dialog.midi-panel');assert(!dialog.open);equal(dialog.getBoundingClientRect().height,0);
   await app.action('midi-settings');assert(dialog.open);equal(dialog.getAttribute('aria-labelledby'),'midi-title');assert(dialog.contains(doc.activeElement));
@@ -47,8 +56,19 @@ await test('Quiz Check, Reveal, Next and retry summary with held MIDI notes',asy
   app.startQuiz([{type:'find',expected:[0],prompt:'Find C',answer:'C'}]);await app.action('reveal');equal(app.quiz.score,0);await app.action('next-question');assert(app.querySelector('[data-action="retry-quiz"]'));
 });
 await test('Arrow-key focus and full 88-key geometry',async()=>{
-  app.update({mode:'notes',viewStart:48,overview:false});const key=app.keyboard.querySelector('[data-midi="60"]');key.focus();key.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));equal(doc.activeElement.dataset.midi,'61');
-  await app.action('overview');equal(app.keyboard.querySelectorAll('[data-midi]').length,88);await app.action('overview');
+  app.update({mode:'notes',viewStart:48,keyCount:25});const key=app.keyboard.querySelector('[data-midi="60"]');key.focus();key.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));equal(doc.activeElement.dataset.midi,'61');
+  app.update({keyCount:88});equal(app.keyboard.querySelectorAll('[data-midi]').length,88);app.update({keyCount:25});
+});
+await test('Keyboard view selector shows exact 49/61-key ranges and clamps octave navigation',async()=>{
+  const control=app.querySelector('#overview');equal(control.tagName,'SELECT');equal([...control.options].map(o=>o.value),['25','49','61','88']);
+  for(const [count,end] of [[49,84],[61,96]]){
+    const select=app.querySelector('[data-field=keyCount]');select.value=String(count);select.dispatchEvent(new Event('change',{bubbles:true}));
+    equal(app.state.keyCount,count);equal(app.keyboard.querySelectorAll('[data-midi]').length,count);
+    equal(app.keyboard.data.start,36);equal(app.keyboard.data.end,end);
+    for(let i=0;i<6;i++)await app.action('octave-up');
+    equal(app.keyboard.data.end,108);equal(app.keyboard.querySelectorAll('[data-midi]').length,count);assert(app.querySelector('[data-action=octave-up]').disabled);
+  }
+  app.update({keyCount:25});
 });
 await test('Mobile layout contains page overflow while keyboard scrolls',async()=>{
   iframe.style.width='390px';await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
