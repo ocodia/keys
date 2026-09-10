@@ -27,7 +27,16 @@ await test('MIDI settings are hidden until opened and do not occupy practice spa
   await app.action('close-midi');assert(!dialog.open);equal(dialog.getBoundingClientRect().height,0);
 });
 await test('Every registered feature renders its controls and meaningful content',async()=>{
-  for(const f of FEATURES){await app.action('mode',{value:f.id});assert(app.querySelector(f.tag));assert(app.querySelector('#details').textContent.trim().length>20);equal(app.querySelectorAll('.nav-item.active').length,1);}
+  for(const f of FEATURES){await app.action('mode',{value:f.id});assert(app.querySelector(f.tag));const panel=app.querySelector('#details');if(['notes','positions','identifier','quiz'].includes(f.id))assert(panel.hidden);else assert(panel.textContent.trim().length>0);equal(app.querySelectorAll('.nav-item.active').length,1);}
+});
+await test('Every page keeps relevant practice content before the keyboard',async()=>{
+  for(const f of FEATURES){
+    app.update({mode:f.id});const panel=app.querySelector('#details'),instrument=app.querySelector('.instrument-column');
+    assert(Boolean(panel.compareDocumentPosition(instrument)&Node.DOCUMENT_POSITION_FOLLOWING));
+    assert(instrument===app.querySelector('.workspace').lastElementChild);
+    assert(!app.querySelector('.below-keyboard'));
+    if(!panel.hidden)assert(panel.getBoundingClientRect().bottom<=instrument.getBoundingClientRect().top+1);
+  }
 });
 await test('Connecting MIDI and enabling monitoring unlock audio within the gesture handler',async()=>{
   const ready=app.audio.ready,connect=app.midi.connect;const calls=[];

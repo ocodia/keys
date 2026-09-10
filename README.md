@@ -14,7 +14,7 @@ Open **http://127.0.0.1:8765/** in Chrome or Edge. `npm run serve` is an optiona
 
 ## Explore and practise
 
-The keyboard spans the available workspace, with compact tool controls above it. Use the menu button beside **Keys** to show/hide navigation; your preference is remembered. Navigation starts collapsed. Optional explanations are under **Guide**. Both light and dark themes use a restrained instrument-panel layout.
+The keyboard spans the available workspace, as the final section, with compact tool controls and relevant learning content above it. Theory uses concise note/interval rows; harmony and quiz panels keep their interactive content. Redundant and empty detail panels are omitted. Use the menu button beside the page title to show/hide navigation; your preference is remembered. Navigation starts collapsed. Keys branding lives in the sidebar; the current page title occupies the topbar. Optional explanations are under **Guide**. Both light and dark themes use a restrained instrument-panel layout.
 
 - **Notes:** choose a two-octave, 49-, 61- or 88-key view. The 49-key view starts at C2–C6; 61 keys spans C2–C7. Octave arrows shift the smaller views within the piano's range; the 88-key view covers A0–C8. Your view is remembered.
 - **Scales:** all 12 roots, contextual note spelling, interval labels, major/minor variants, pentatonic, blues, chromatic and major-scale modes. Classical melodic minor uses natural minor descending.
