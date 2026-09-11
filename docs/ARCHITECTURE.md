@@ -11,6 +11,10 @@ Keys is a static native-ES-module application. `index.html` loads the stylesheet
 - `theory.js`: pure pitch-class, spelling, scale, voicing, palette, identifier, geometry and progression calculations. MIDI 60 is C4. MIDI range is 21–108; free labels and contextual spellings are distinct.
 - `storage.js`: the sole persistent state writer. Whitelists and validates fields, clamps numeric settings and repairs old/malformed data. `Store.update(patch)` persists and emits `change`. Transient state never enters localStorage.
 - `input-service.js`: normalises hardware input and tracks held/sustained sets by source. `PianoAudio` is independent of both rendering and persistence.
+- `audio-service.js`: shared mixing, source-specific voice/sustain lifecycle, sample preparation, cancellation and transport. The `PianoAudio` name is retained for compatibility.
+- `instruments/registry.js`: instrument IDs and factories.
+- `instruments/piano.js`: sample mapping, local loading, a 192 MiB decoded LRU cache, stereo sample voices and pitch-dependent damper envelopes. Active source buffers live independently of the cache.
+- `sounds/salamander/`: 480 immutable stereo Ogg recordings, attribution and a checksum/provenance manifest; `scripts/fetch-piano.py` reproduces them without installing dependencies.
 - `quiz.js`: pure prompt generation, answer matching and session scoring; the view supplies selected/held pitches on explicit Check.
 - `service-worker.js`: versioned, scope-specific precache. Updates wait for an explicit user action. Cache activation removes only prior Keys caches for this exact scope.
 
@@ -18,7 +22,7 @@ Keys is a static native-ES-module application. `index.html` loads the stylesheet
 
 Normalised input events use `{ type, source, pitch?, velocity?, timestamp, down? }`. Types are `note-on`, `note-off`, `sustain` and `all-notes-off`; pitches are integer MIDI values, velocity is 0–1, and sustain uses `down`. MIDI source IDs include device and channel; pointer IDs keep multitouch notes separate. CC120/123 intentionally panic all active input sources.
 
-The router owns `held` and `sounding`. Playback highlights are separate from both and never reach quiz submission. Audio uses `on`, `off`, `sustain`, `sequence`, `settings` and `stop`; stop invalidates pending audio startup as well as cancelling timers and releasing voices. The synth caps voices at 64 and decays them over time.
+The router owns `held` and `sounding`. Playback highlights are separate from both and never reach quiz submission. Audio uses `on`, `off`, `sustain`, `sequence`, `settings` and `stop`; stop invalidates pending audio startup as well as cancelling timers and releasing voices. The mixer caps active voices (including release tails) at 96, stealing released voices before held notes. Pending loads are cancelled logically by note-off, Stop, retrigger or instrument changes; late completions never start obsolete notes. Sustain is isolated by input source and preserves pending notes until pedal-up.
 
 Voicings retain ascending pitches and rotate low tones up an octave for inversion. Progressions enumerate inversions/octave candidates in the selected two-octave register; each subsequent chord minimises summed corresponding-voice movement. Equal-cost candidates sort lexicographically by MIDI pitches. This is a deterministic local minimum for each transition, not global optimisation over the full progression.
 
@@ -34,6 +38,15 @@ Optional feature-detected WebMCP tools configure the visible explorer and read i
 4. Extend keyboard context only if the feature needs new targets or labels.
 5. Test calculations and at least one complete browser interaction.
 6. Include new runtime assets in the service-worker precache and bump its version. Update the README.
+
+## Add an instrument
+
+1. Register a factory in `instruments/registry.js`; each instance supplies `id`, `name`, `prepare(context, pitch, velocity)` and `start(context, output, pitch, velocity, prepared, onEnded)`.
+2. `prepare` returns instrument-specific data; it can be immediate for a synthesised organ. `start` returns a handle with `release(force)` and `dispose()`. `release(false)` applies the instrument's normal envelope; `release(true)` silences it promptly even for undamped/continuous voices. `dispose` immediately frees a stolen voice. Call `onEnded` exactly once when nodes are disconnected.
+3. Use `audio.setInstrument(id)` to stop old voices and invalidate outstanding note loads before switching. The existing keyboard, MIDI input and transport need no instrument-specific code. Add a saved selector when there is a second instrument to choose.
+4. Cache any new modules/assets in the service worker and test switching while notes or sample loads are active.
+
+The current piano preserves the recordings' stereo field and recorded velocity dynamics. It does not yet simulate sympathetic resonance, half-pedal or mechanical release/pedal noise. Ogg decoding targets current Chrome/Edge. Warmup is limited to the visible range at onscreen velocity; cold recordings can add first-note latency. The immutable `salamander-v1` cache is retained across shell updates. Increment that cache version if the recordings change. Installation waits for every sample, so an interrupted download cannot advertise a complete offline piano.
 
 ## Compatibility and data
 

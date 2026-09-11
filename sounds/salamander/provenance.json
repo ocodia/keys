@@ -1,0 +1,2514 @@
+[
+  {
+    "package": "@audio-samples/piano-velocity1",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity1/-/piano-velocity1-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v1.ogg",
+        "bytes": 248175,
+        "sha256": "e43df4626143bdaaca421205c20f1d76c7407a4af9757655d248c5630c6edf9d"
+      },
+      {
+        "file": "A1v1.ogg",
+        "bytes": 242535,
+        "sha256": "7f8b68adcae538225ad425c0c520eb1e8b4f5536dc431533faa23ef9fe688d9b"
+      },
+      {
+        "file": "A2v1.ogg",
+        "bytes": 203082,
+        "sha256": "9e26d5bd6e354719443aa1f000ac19c3aaa3d00831d014bfa34d64f54082652e"
+      },
+      {
+        "file": "A3v1.ogg",
+        "bytes": 162990,
+        "sha256": "ff4eeae70563c88674c242af0e7c375cf00e72f747f960b79d21953c7061fe0f"
+      },
+      {
+        "file": "A4v1.ogg",
+        "bytes": 159676,
+        "sha256": "c3bd032a01990f0087b06d94ebc737f25d213c9fb60dff9e90f6d8ec08df6e83"
+      },
+      {
+        "file": "A5v1.ogg",
+        "bytes": 87486,
+        "sha256": "bb7355675746580d918df7aa08cb67096c76b76a44a5d0f24cbf8b5e2064aabd"
+      },
+      {
+        "file": "A6v1.ogg",
+        "bytes": 67052,
+        "sha256": "b1ef4cac0b338fe85f5353c77fe28f2884ca764ae8e42f2a17d8ba80362ae641"
+      },
+      {
+        "file": "A7v1.ogg",
+        "bytes": 33790,
+        "sha256": "2ad94fa97387315115ad360b8111fc518fb6e406c10d4b246174aeec84862d25"
+      },
+      {
+        "file": "C1v1.ogg",
+        "bytes": 272064,
+        "sha256": "c807b7bf5f8e4d6eabb10c50cac119efa9ee876875a53cef85c4b0075fa5b77a"
+      },
+      {
+        "file": "C2v1.ogg",
+        "bytes": 224296,
+        "sha256": "5f2d29aa2fd75bf082f1ecac7a060c824a230dc0646d206c2bc0e872cb782b1a"
+      },
+      {
+        "file": "C3v1.ogg",
+        "bytes": 191690,
+        "sha256": "01312043511a161a03ff6edfc6b8a96783e76617c56ad1f5e56943aff7d3f657"
+      },
+      {
+        "file": "C4v1.ogg",
+        "bytes": 146655,
+        "sha256": "df81ef1c771d237641134216a332f8d60609452a2f40d0bf5168c92c822f09bd"
+      },
+      {
+        "file": "C5v1.ogg",
+        "bytes": 153125,
+        "sha256": "d28ba63f84eb962eeb109717e81565ff32b037984682eb24ca2b0e9d4c520bed"
+      },
+      {
+        "file": "C6v1.ogg",
+        "bytes": 69253,
+        "sha256": "575fc25dabd70cda436ba25acd44ef58c29fe9d59e5a0ff3554b8cb7e2fbabd5"
+      },
+      {
+        "file": "C7v1.ogg",
+        "bytes": 52631,
+        "sha256": "7751be0c6527ff0baf6bc4e5182d30dc0b4fb6db38b90102270d7ab193ccfcb9"
+      },
+      {
+        "file": "C8v1.ogg",
+        "bytes": 42259,
+        "sha256": "512e473147c33ce469141a1de25992af0c77ff2a8d791b217ebececc7d45c76a"
+      },
+      {
+        "file": "D#1v1.ogg",
+        "bytes": 220462,
+        "sha256": "97ff70e18e7c7cbf2d04f861e62b2a8a9e81add1baf4cd98866f2798904d75ca"
+      },
+      {
+        "file": "D#2v1.ogg",
+        "bytes": 230795,
+        "sha256": "068fb4981053d3566ead3cca42cb12982ab5c0d9d72ce476d93fb6441a3b5436"
+      },
+      {
+        "file": "D#3v1.ogg",
+        "bytes": 157120,
+        "sha256": "1c71c83d914b13cda54a552df4348e124d556068e4dd7d5a0104c03694ad3360"
+      },
+      {
+        "file": "D#4v1.ogg",
+        "bytes": 158944,
+        "sha256": "f6bea379dfe0f91672668ffc13dae5dd0adf25415effec4de301558a0974650e"
+      },
+      {
+        "file": "D#5v1.ogg",
+        "bytes": 141937,
+        "sha256": "e1718c9e613fcbc7bba87883d9c66c0c3bec7aedd59ca8fe24f041fc705d5503"
+      },
+      {
+        "file": "D#6v1.ogg",
+        "bytes": 91881,
+        "sha256": "1db2f6a99b6d067ba82fe260568e4f0a05a76c5c4e13acc8a6943cba386426dc"
+      },
+      {
+        "file": "D#7v1.ogg",
+        "bytes": 63457,
+        "sha256": "d2ae0d18ae0eb3e313efe440d9d584c3fc591aa91b1926224039e13283a92740"
+      },
+      {
+        "file": "F#1v1.ogg",
+        "bytes": 190682,
+        "sha256": "addffc2b6be9e4f453e5bd12ebe8662eebc082cd3db3bfcd5451a12826d8c547"
+      },
+      {
+        "file": "F#2v1.ogg",
+        "bytes": 213873,
+        "sha256": "39b2d108c38a41fe0376da119f10068dce21f89c39a0dd9f6d7e24f5131367eb"
+      },
+      {
+        "file": "F#3v1.ogg",
+        "bytes": 188298,
+        "sha256": "8dfacd417557c320328473e8ae202985d952019e0ebce880c498906f9df203fd"
+      },
+      {
+        "file": "F#4v1.ogg",
+        "bytes": 146068,
+        "sha256": "4cbfd462aa824aeb63eaf1ec103b0b8aa26e9a24a0b0656e700ae18551eee80b"
+      },
+      {
+        "file": "F#5v1.ogg",
+        "bytes": 129217,
+        "sha256": "4810788616cd102fb20d3087ab0d387a6d9f6d9900d1dcee3b2da00110bb4614"
+      },
+      {
+        "file": "F#6v1.ogg",
+        "bytes": 57862,
+        "sha256": "5ac032fa225520d5f9f2c4c95d752709f9d243b457b90331ad5e71b3789169c6"
+      },
+      {
+        "file": "F#7v1.ogg",
+        "bytes": 67392,
+        "sha256": "93292e8347bda9bac7892803f93e26e9d85ff88e52bc51679737f0189083f07d"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity2",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity2/-/piano-velocity2-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v2.ogg",
+        "bytes": 239017,
+        "sha256": "fdf0d2f831da2f6242681a55d2ffadea96933bbc90e16c3ae779b5b21a6a9f8b"
+      },
+      {
+        "file": "A1v2.ogg",
+        "bytes": 237407,
+        "sha256": "d088c4934d7379b2122515bc4a0eb6602352c2a545ac04019759f7e26b3d7fc3"
+      },
+      {
+        "file": "A2v2.ogg",
+        "bytes": 202382,
+        "sha256": "0a70c16fe44bbf1c81e6ebe3c37fdd90857d51e4ee1ce80060f3aacbbbefb9cd"
+      },
+      {
+        "file": "A3v2.ogg",
+        "bytes": 177865,
+        "sha256": "5bcd4ad24b5817bd2769ad25bdd07265e42d5741775115a56c99ac4c30cf03e9"
+      },
+      {
+        "file": "A4v2.ogg",
+        "bytes": 159118,
+        "sha256": "ff9b54dcbe4d851f5dc7af705791fb851c4070ac51073126132c4ce7eec39041"
+      },
+      {
+        "file": "A5v2.ogg",
+        "bytes": 85734,
+        "sha256": "e639be4d3f032021fa45f4736b136e0377e8504acbeed7e811cf1a8f8c460a12"
+      },
+      {
+        "file": "A6v2.ogg",
+        "bytes": 71689,
+        "sha256": "0b9b80452b9a12869de2110735b033bb249092ce4cb772bd7b1d9cd200650f99"
+      },
+      {
+        "file": "A7v2.ogg",
+        "bytes": 43639,
+        "sha256": "78387d764909b9a9c550973d684c05e02ed63509887a392bfbccdf68abfb6ba4"
+      },
+      {
+        "file": "C1v2.ogg",
+        "bytes": 267451,
+        "sha256": "c3bf4c62ec3e32650d57449e7e9ab545479eebd8dae508bfff4bee6abab3340f"
+      },
+      {
+        "file": "C2v2.ogg",
+        "bytes": 231596,
+        "sha256": "1c66aaf6b407e07056be63004af3f2b81842c4d70ed2eac81690b4e1c9f990d1"
+      },
+      {
+        "file": "C3v2.ogg",
+        "bytes": 192187,
+        "sha256": "4691639d2b56bce37deffbfef4604f27aeeed9b663239e549f6994b134629243"
+      },
+      {
+        "file": "C4v2.ogg",
+        "bytes": 166469,
+        "sha256": "ff608f9ee3b2b9cb4632baec8fedfc461791fdd62e83da38067ebd8fe2a84d7c"
+      },
+      {
+        "file": "C5v2.ogg",
+        "bytes": 166483,
+        "sha256": "88a4e820458a072ad118dcabfe75f014c7b014a1fdfec9019ef4debfd87f8c43"
+      },
+      {
+        "file": "C6v2.ogg",
+        "bytes": 65287,
+        "sha256": "7409a31e94ca4a0132c9f8cb23ab886a8674a287fa32578690f53800b64c18bd"
+      },
+      {
+        "file": "C7v2.ogg",
+        "bytes": 52415,
+        "sha256": "dc9f75a6ba2e228852749a2d4cfe3a2504314b2fcc9e7b454d51960d59d42a3d"
+      },
+      {
+        "file": "C8v2.ogg",
+        "bytes": 43943,
+        "sha256": "5afdb6ff7663a57a9ae33fddd22d7d8849ff4702d0f856745abcc87706458cba"
+      },
+      {
+        "file": "D#1v2.ogg",
+        "bytes": 250572,
+        "sha256": "d2642cf0289a5f7d2b49bf67921608bab522a8ff61c9ebc76202cf685caf25fd"
+      },
+      {
+        "file": "D#2v2.ogg",
+        "bytes": 251236,
+        "sha256": "c5faeaa05b6e2cb8a6de40c75048d0c7235840e69332d54296ac0270758b62ae"
+      },
+      {
+        "file": "D#3v2.ogg",
+        "bytes": 178021,
+        "sha256": "534e43348f8196cee5cfcc89a0fef55a0ce87adfc3536e0949a0b7bd239b998b"
+      },
+      {
+        "file": "D#4v2.ogg",
+        "bytes": 161035,
+        "sha256": "f1077f97157bc3ab6a79ea458c9a09ccac55b5f078aabcb73198c68c5838c60f"
+      },
+      {
+        "file": "D#5v2.ogg",
+        "bytes": 144822,
+        "sha256": "c4f1bd8c22aadc669a5171e9d2f9a3f7eacb9f5650bf62e5848cb20a2c2d9f64"
+      },
+      {
+        "file": "D#6v2.ogg",
+        "bytes": 89135,
+        "sha256": "3447070f8f395ccdb67333b4bc04f7d900aa410d7649fd3ae744714331f8e90b"
+      },
+      {
+        "file": "D#7v2.ogg",
+        "bytes": 63585,
+        "sha256": "0ba7d69ce28740974fec4b24a54983eed4ebe154cf63bb568060864e45823deb"
+      },
+      {
+        "file": "F#1v2.ogg",
+        "bytes": 208324,
+        "sha256": "df6d4d6faa30321ca3a85cf14652f28f4ba0fb916c378e67734e0b03b9281fd4"
+      },
+      {
+        "file": "F#2v2.ogg",
+        "bytes": 225920,
+        "sha256": "a7ea3548a5eb4befe259db3f40c3cccaa373671430c7998e942a3ed1dcd58041"
+      },
+      {
+        "file": "F#3v2.ogg",
+        "bytes": 168259,
+        "sha256": "9860068a4605e40d5ca62f209513280867e63eb0769d3a1b1983ddb769b57d63"
+      },
+      {
+        "file": "F#4v2.ogg",
+        "bytes": 157099,
+        "sha256": "ab99f460707fa7360cf4fb2f1481b5da2b3e83aea4c9518e03f15709298dd4e2"
+      },
+      {
+        "file": "F#5v2.ogg",
+        "bytes": 132038,
+        "sha256": "efa1cd2f9b633556309e224adf2102493ae80d6010e428fff53dd4b815a8dceb"
+      },
+      {
+        "file": "F#6v2.ogg",
+        "bytes": 58031,
+        "sha256": "18377378d8ce40f3b8ee790d5ed5ba2e4cff1479498731c0c66635d206312737"
+      },
+      {
+        "file": "F#7v2.ogg",
+        "bytes": 63440,
+        "sha256": "fbdef4a484d6618d9cc176fbedda4708e3a34851ad293ba7257aabd7a2c96892"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity3",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity3/-/piano-velocity3-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v3.ogg",
+        "bytes": 253860,
+        "sha256": "8e2cadf5c4aacfc7aa5813153885224553fbf3881ab51278a92e90fe2aa52d24"
+      },
+      {
+        "file": "A1v3.ogg",
+        "bytes": 241475,
+        "sha256": "f3c7371fca0d173fa067d728c5bbdd0b0c5f46abe399678f732c263701f8bdd7"
+      },
+      {
+        "file": "A2v3.ogg",
+        "bytes": 198723,
+        "sha256": "77efc1bba5efee8f08dddfc4e08886e3752ffa758e7ffbce7a40885cb717613a"
+      },
+      {
+        "file": "A3v3.ogg",
+        "bytes": 185981,
+        "sha256": "b46e3cb47ccb405d697d40710e3c8ebbb3e3ad5a54ea1253aca6b14117a17166"
+      },
+      {
+        "file": "A4v3.ogg",
+        "bytes": 164282,
+        "sha256": "fff85299764533296e39f6f75f98831c3ea93098945074ba98a9297d33af8d49"
+      },
+      {
+        "file": "A5v3.ogg",
+        "bytes": 85570,
+        "sha256": "f7835022ef11f890cf7f03e3fb03700f632c010d5e9fe13f113f9bad3f948b05"
+      },
+      {
+        "file": "A6v3.ogg",
+        "bytes": 70777,
+        "sha256": "12771d1dd8bc23112ad514199ef98d885b895e1c3a90a3ff200a615e7ae54bc0"
+      },
+      {
+        "file": "A7v3.ogg",
+        "bytes": 47972,
+        "sha256": "068f5511f3186b6f494524b500e7f7274875af9d2bb82f676c0fb4a989843a6d"
+      },
+      {
+        "file": "C1v3.ogg",
+        "bytes": 266335,
+        "sha256": "50b0c3ee2645d1a2bb850dcbdad75428ffdca03fafdc36c618e15609b44ab559"
+      },
+      {
+        "file": "C2v3.ogg",
+        "bytes": 245655,
+        "sha256": "c194b4e43b8038b4fe930bbd518e4c351ec225354261e473c95f831b9b129c23"
+      },
+      {
+        "file": "C3v3.ogg",
+        "bytes": 194830,
+        "sha256": "33ce23bd899e977cdc2c6af75902a82bb7909d101a8e9cc6782535788f521ee4"
+      },
+      {
+        "file": "C4v3.ogg",
+        "bytes": 194663,
+        "sha256": "85c680bdd5e55c404e376db0ada0475ad364baed8fcbfd9ee5ea53de556e55fd"
+      },
+      {
+        "file": "C5v3.ogg",
+        "bytes": 167325,
+        "sha256": "9822a70ab86776d6f13b8d277f73ad49285772e0089c741b9bcd51fe00ba6fbf"
+      },
+      {
+        "file": "C6v3.ogg",
+        "bytes": 66817,
+        "sha256": "8c9f0907c729c478358e88ee2f256a913a9cc20779e0efec9fb4da54b27b63eb"
+      },
+      {
+        "file": "C7v3.ogg",
+        "bytes": 55625,
+        "sha256": "3e44959a50efe0d966581f53e78d4cb5c849619a8b10a7fc7f25c8492ceca274"
+      },
+      {
+        "file": "C8v3.ogg",
+        "bytes": 38525,
+        "sha256": "b2b54f4ac64d38b0763a5d95e844ea204563b758f1f8953cc6aa30a683389205"
+      },
+      {
+        "file": "D#1v3.ogg",
+        "bytes": 251958,
+        "sha256": "6699cbf1420e01420654ac45127802740f722fc22bae44446e5edc303f640c1a"
+      },
+      {
+        "file": "D#2v3.ogg",
+        "bytes": 261876,
+        "sha256": "a39cb6648647b90c137d9815e2a4f930f3c97ca2daabab57865d1179dc1f91a3"
+      },
+      {
+        "file": "D#3v3.ogg",
+        "bytes": 194127,
+        "sha256": "3f49e6f0ee471e74cbc12349b8691d469991367b5ea9948821f00168e328b733"
+      },
+      {
+        "file": "D#4v3.ogg",
+        "bytes": 169948,
+        "sha256": "12611d620ac3994c892900935b23a0e9a4f6687e6a3a73305b02ab2123ec80b5"
+      },
+      {
+        "file": "D#5v3.ogg",
+        "bytes": 143850,
+        "sha256": "379769ee9d7568dec9db912ee5ff057c228bc493905f038787626fc432546211"
+      },
+      {
+        "file": "D#6v3.ogg",
+        "bytes": 88886,
+        "sha256": "346e39be14fbdedf219d82542fea24c836d7e7b4998387e85cd9d3b763caf52e"
+      },
+      {
+        "file": "D#7v3.ogg",
+        "bytes": 62856,
+        "sha256": "a7f204681c0f9fb6901aed1fdae6a624feb5b54fd1c2173efebe2cc3b3c5905e"
+      },
+      {
+        "file": "F#1v3.ogg",
+        "bytes": 224574,
+        "sha256": "c355f9442557be90af5fd484389378665328993ee6a3d54eac7c390c77573363"
+      },
+      {
+        "file": "F#2v3.ogg",
+        "bytes": 243207,
+        "sha256": "3e114cc06b3e1e9d7647be377b049727c4618651d18f988fbffd2a62f7bda80e"
+      },
+      {
+        "file": "F#3v3.ogg",
+        "bytes": 195303,
+        "sha256": "78003dfd44c370ebfcb08ce97996a47236b08e61c5137530e860d08af3e2847a"
+      },
+      {
+        "file": "F#4v3.ogg",
+        "bytes": 159817,
+        "sha256": "ccca59d988369a62fd8f5d717c93eeb642b9a692a6cf28619fbc278c20e0d9df"
+      },
+      {
+        "file": "F#5v3.ogg",
+        "bytes": 136026,
+        "sha256": "b0644aa77a3ea28b1ffeccae7deaf42f2c1a1169a4b8a95b42497938abf7de43"
+      },
+      {
+        "file": "F#6v3.ogg",
+        "bytes": 72063,
+        "sha256": "edd8d57442046a6dc2b192a468fff5378befde59a1f7527c69b0e69c25e55a61"
+      },
+      {
+        "file": "F#7v3.ogg",
+        "bytes": 64072,
+        "sha256": "c518087a013c994f63132d9f8417b88573b02bc0bf55d7ded8400d66f93b3ed2"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity4",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity4/-/piano-velocity4-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v4.ogg",
+        "bytes": 281723,
+        "sha256": "efa534accd095699906dfef8b9fac7711acc67c83160435256fde256d1b36637"
+      },
+      {
+        "file": "A1v4.ogg",
+        "bytes": 236934,
+        "sha256": "71aed5898da24a8059ce73206299281d0078ddcd461f5ecd7afaee3d5ec2b9d0"
+      },
+      {
+        "file": "A2v4.ogg",
+        "bytes": 203322,
+        "sha256": "81d7ec03975f55d21e94934ed86a67cdae4b2e40eb8ee3dff7f039b8ee93ab6a"
+      },
+      {
+        "file": "A3v4.ogg",
+        "bytes": 195517,
+        "sha256": "1b9c6b14dc5dd569bce990de5de149d2cb4b0cddb34f517f66f89d102a18d414"
+      },
+      {
+        "file": "A4v4.ogg",
+        "bytes": 166814,
+        "sha256": "7539da664e02943f8600b6f2b2f47fb82214235b8cde797f801ad4c49aa8812f"
+      },
+      {
+        "file": "A5v4.ogg",
+        "bytes": 86224,
+        "sha256": "f1d59a99b978db2df1d70b4eec24fb58889ec34f8a093e1d29444dc5342ed8d8"
+      },
+      {
+        "file": "A6v4.ogg",
+        "bytes": 77594,
+        "sha256": "7adb30ce7956d167e6358f60ea8d0121d111ac34344ff6189d40f585060c332a"
+      },
+      {
+        "file": "A7v4.ogg",
+        "bytes": 47109,
+        "sha256": "77bc8dda111f1570a3f1f0a8997650403748a65a734c55f3aadaf9aae9d21ee5"
+      },
+      {
+        "file": "C1v4.ogg",
+        "bytes": 264454,
+        "sha256": "bb27a121fa14e2272c00cddc1c0a8492965027a518b506e9fdd3fbc7044063ec"
+      },
+      {
+        "file": "C2v4.ogg",
+        "bytes": 240329,
+        "sha256": "53a4dc4e0a11b99040065c7908a6e146c5dc51d564a57bf4233523f6902a751d"
+      },
+      {
+        "file": "C3v4.ogg",
+        "bytes": 193627,
+        "sha256": "5850772fd961cb7fbc067c8f16308914f1759f5bf073c0812f95d420831797ef"
+      },
+      {
+        "file": "C4v4.ogg",
+        "bytes": 184905,
+        "sha256": "c1b321238e833978f1b1e8a4e67e99092a26e1877f296bceaf17420ef11afd66"
+      },
+      {
+        "file": "C5v4.ogg",
+        "bytes": 177855,
+        "sha256": "a8d69aeb9f444c2fd118eed1349d5c8dc8433693eec91c33ca49287f1dfaaf25"
+      },
+      {
+        "file": "C6v4.ogg",
+        "bytes": 72820,
+        "sha256": "1ce5458c5ec6e2d7ff20579c065857e9ccf461b8a357defc3247f43800f22cf9"
+      },
+      {
+        "file": "C7v4.ogg",
+        "bytes": 51356,
+        "sha256": "a93c8c2b145b4fa6587ab0e38449cd80622c741653530c2e0819c3b7c79cf007"
+      },
+      {
+        "file": "C8v4.ogg",
+        "bytes": 38672,
+        "sha256": "327b8e69354531656c78b1ae10223f190975ffe73f035473fa1372226f6d35cf"
+      },
+      {
+        "file": "D#1v4.ogg",
+        "bytes": 257745,
+        "sha256": "383e40983307b0c13057be8a49f9598016e103f74b08a781641007c61a2b044a"
+      },
+      {
+        "file": "D#2v4.ogg",
+        "bytes": 272941,
+        "sha256": "3e85b81936ac5aaab445ad7ce5c85cd8522ec33efc7ac89c2be997cc6185cdc5"
+      },
+      {
+        "file": "D#3v4.ogg",
+        "bytes": 193213,
+        "sha256": "c22f685ee8cad26c27616a5e7e0a3b1dd6be79da478a51e1e62be64c7adc0d1c"
+      },
+      {
+        "file": "D#4v4.ogg",
+        "bytes": 182135,
+        "sha256": "4d99ad68de30707cc13ce044879c60a5822be9137bce50872b7e7955bc589a94"
+      },
+      {
+        "file": "D#5v4.ogg",
+        "bytes": 147131,
+        "sha256": "9ef915e99fee990a691434a323f8a44c7ce34f39862ec97d02e36e94c16b9bb2"
+      },
+      {
+        "file": "D#6v4.ogg",
+        "bytes": 87502,
+        "sha256": "4d9c03e57187fbb5f19223ef62279293f7cad151681af70017f13d50b75c9128"
+      },
+      {
+        "file": "D#7v4.ogg",
+        "bytes": 60551,
+        "sha256": "e8d9b6a463939b2e6564fb757a1bb11dfd4a2b2b3944a23932cd9ce73063f26f"
+      },
+      {
+        "file": "F#1v4.ogg",
+        "bytes": 258517,
+        "sha256": "57f210c0d0c3e53000d5b21eb6ca2c17e0c8389b1b6abd43359206e2626152d7"
+      },
+      {
+        "file": "F#2v4.ogg",
+        "bytes": 242488,
+        "sha256": "c010d5cc67a54f8d66aa8eb167b442358575560bd7528922c2d04b7afdefb6d8"
+      },
+      {
+        "file": "F#3v4.ogg",
+        "bytes": 195719,
+        "sha256": "31b539dbd1424551550ef2688a3afb339679aaf419f8578f7380cd9463605192"
+      },
+      {
+        "file": "F#4v4.ogg",
+        "bytes": 155318,
+        "sha256": "e6772c3053a2ef32e03aa13843de6b070dabfcb9e002f13b963a7aeb2323d026"
+      },
+      {
+        "file": "F#5v4.ogg",
+        "bytes": 135793,
+        "sha256": "4f528760a95f55136724a9dadedd14e3905bb16f18d1aad82a41488e8af4b0da"
+      },
+      {
+        "file": "F#6v4.ogg",
+        "bytes": 72881,
+        "sha256": "ec2f8a04759b5b87315e5c828c0625409cdef73a8628217e06a4970ada02d39e"
+      },
+      {
+        "file": "F#7v4.ogg",
+        "bytes": 66138,
+        "sha256": "e7f521367d7f3be170e30caabb027a0733a9e2cb623b3d03eb7b48ad9febdf22"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity5",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity5/-/piano-velocity5-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v5.ogg",
+        "bytes": 281305,
+        "sha256": "67a5b361b513f5ddb6673ff34bbdd35835a2f40f054dadf71a89599837896ab3"
+      },
+      {
+        "file": "A1v5.ogg",
+        "bytes": 253121,
+        "sha256": "00947acd60b22710bc9ea7d7dbbf7e14231908934c6b1363b483c1d1b7b8a010"
+      },
+      {
+        "file": "A2v5.ogg",
+        "bytes": 201370,
+        "sha256": "8a127d8fa8471d53d1ff20c977ac63b9ee0cf00c55d91ffdd02181e2911d654f"
+      },
+      {
+        "file": "A3v5.ogg",
+        "bytes": 192351,
+        "sha256": "ccad9ceb3c913cf84d3ac094aee2d12d07dc178636e72e09009a2d39383bb321"
+      },
+      {
+        "file": "A4v5.ogg",
+        "bytes": 166062,
+        "sha256": "9dab3daa2f5bdd52eca8d8f966cc1e4e8f57fc58b5ed49a636fc2f8c8bedc8c0"
+      },
+      {
+        "file": "A5v5.ogg",
+        "bytes": 107472,
+        "sha256": "44fe3dcca72d66822e440084093f7afa71d89447c6d0dec4c8f8ef0ca3262a53"
+      },
+      {
+        "file": "A6v5.ogg",
+        "bytes": 82708,
+        "sha256": "1b5b95c3ab819280cec0f0816a3f7bf0aaeae7367729207e8dc99a741f709b3d"
+      },
+      {
+        "file": "A7v5.ogg",
+        "bytes": 46678,
+        "sha256": "550a942032b87e7ab3e98f6e77745244c47cae7b48923dd75506f1dfe3e5a9ad"
+      },
+      {
+        "file": "C1v5.ogg",
+        "bytes": 263852,
+        "sha256": "e247e7dc6a40a49520efa5f9743ac1b99a37a5bb51d20f9a1f65928e1cace785"
+      },
+      {
+        "file": "C2v5.ogg",
+        "bytes": 271419,
+        "sha256": "9399142967773552951a636019a03a77d40ce378f2b997efe5a3480ce9016b97"
+      },
+      {
+        "file": "C3v5.ogg",
+        "bytes": 197905,
+        "sha256": "b22847e67408a7dab5901566b8d95217ff572be13e2c9a591049f4202c4a0c73"
+      },
+      {
+        "file": "C4v5.ogg",
+        "bytes": 192257,
+        "sha256": "36938b04136838f724ce9385956ad35c83e90f8015176cf1a15f70a0fa915d57"
+      },
+      {
+        "file": "C5v5.ogg",
+        "bytes": 184744,
+        "sha256": "e0e789ad27b8d874b198e76d4e909abb7f6fe5a8f52f7be43a4c94a8c41ad7c6"
+      },
+      {
+        "file": "C6v5.ogg",
+        "bytes": 77487,
+        "sha256": "0fb2b9b3bfe584839eff871cef961ae0d316f8d0b41b7b4c95b57ba4a6a1bc8a"
+      },
+      {
+        "file": "C7v5.ogg",
+        "bytes": 52748,
+        "sha256": "510cbd9ef8e03e37c3995d1eff6f233691ba2924e18695bf083502c796a2d06a"
+      },
+      {
+        "file": "C8v5.ogg",
+        "bytes": 38242,
+        "sha256": "b3abec045210f033a221a9330867445a8107343be29adad9e9abac3443894baa"
+      },
+      {
+        "file": "D#1v5.ogg",
+        "bytes": 282938,
+        "sha256": "3e03eb61abccda60ce58f4cc88b89eb18f846a2a0205fd08c599e69b4f45b4ac"
+      },
+      {
+        "file": "D#2v5.ogg",
+        "bytes": 275611,
+        "sha256": "1e85e5e46d09ce10ee6ce5eee965a43bdaf1c28417b9e6639e4e37b8e9eacf48"
+      },
+      {
+        "file": "D#3v5.ogg",
+        "bytes": 198339,
+        "sha256": "72528cdfdb82159c8a24b7fc8fd45a2f1bf6725aaf9e5ea8b076f350dd40857c"
+      },
+      {
+        "file": "D#4v5.ogg",
+        "bytes": 178548,
+        "sha256": "5956a1b33a47199a71b08a918539cac7302238d1669007ad06fc9becd76196d7"
+      },
+      {
+        "file": "D#5v5.ogg",
+        "bytes": 143156,
+        "sha256": "d3f1cb4a20aede67ad4736631f33c146c00e62d852ecce278f1fdd5f376bf813"
+      },
+      {
+        "file": "D#6v5.ogg",
+        "bytes": 90206,
+        "sha256": "42e2ff3894e0747542e7f8e536d9d351f1fc0b6d0f68079fc93da54e29c4ceb7"
+      },
+      {
+        "file": "D#7v5.ogg",
+        "bytes": 59999,
+        "sha256": "9b40c9c1b01a7a8af28c7624049a385bcc74a5006fb6248d400100cab841134d"
+      },
+      {
+        "file": "F#1v5.ogg",
+        "bytes": 257764,
+        "sha256": "093fc3107343e8fb996321f9477ec6d825ef8a3c65fde14b18c244f1df1badc3"
+      },
+      {
+        "file": "F#2v5.ogg",
+        "bytes": 257163,
+        "sha256": "bbd1f351f4cf3aa4a6938a85062bb61ccebb48203fa78da49964e60a759df628"
+      },
+      {
+        "file": "F#3v5.ogg",
+        "bytes": 196278,
+        "sha256": "502bc3645cde6c25254d495c887e1a2c1cd115a5f0a741584be68642e37f203f"
+      },
+      {
+        "file": "F#4v5.ogg",
+        "bytes": 169780,
+        "sha256": "cc9a25dec04f5d54c01a0854f78ee0dcc3be73032dca093e0f354fc2698eb29f"
+      },
+      {
+        "file": "F#5v5.ogg",
+        "bytes": 138518,
+        "sha256": "ce535fe7df616a5a7f193182948d7a8d6c09c5c2767ba1c0808f2e7785fd2fdb"
+      },
+      {
+        "file": "F#6v5.ogg",
+        "bytes": 73745,
+        "sha256": "43e8e3dce7993db0db87e4512619ab6d8c896b8a722e9fc564566a66dd056d9e"
+      },
+      {
+        "file": "F#7v5.ogg",
+        "bytes": 63590,
+        "sha256": "ea34cb429d2ffc11f39af6ba8e51e7ed28144f8915c270818cfaa7094a09f962"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity6",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity6/-/piano-velocity6-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v6.ogg",
+        "bytes": 278110,
+        "sha256": "52c5688f615735aa7e82811fa0a0eeeea23234e1e4bc6ad5969b49ff7b7ee5b7"
+      },
+      {
+        "file": "A1v6.ogg",
+        "bytes": 280296,
+        "sha256": "470676438caf1e0182a4b2dee410c3aa0128a5680760dd27badfde9f6d37948c"
+      },
+      {
+        "file": "A2v6.ogg",
+        "bytes": 199061,
+        "sha256": "d103edb4dc2f3f8b4bfb9f522993464c301a100ce5cdf9d43440c6fe642bdee6"
+      },
+      {
+        "file": "A3v6.ogg",
+        "bytes": 194296,
+        "sha256": "34e0ff63bd703aaa0afdb17bc9623aca08ed870f224b2ce03c100db710ad03b6"
+      },
+      {
+        "file": "A4v6.ogg",
+        "bytes": 167942,
+        "sha256": "82ef41f89f85904d08952d89ec8eb2fad652e04b77c89ba95b3fad94d86e0290"
+      },
+      {
+        "file": "A5v6.ogg",
+        "bytes": 122202,
+        "sha256": "31890edc7810b2cff819efefec9cf5b3ca8dd1abfb797e0a6984c60046df8ada"
+      },
+      {
+        "file": "A6v6.ogg",
+        "bytes": 80667,
+        "sha256": "40c2e099dc7e62247bfca926d34274ac0930f2b82b90d29bf30758a3563c35b5"
+      },
+      {
+        "file": "A7v6.ogg",
+        "bytes": 46130,
+        "sha256": "7ede674fd4821fa6c626604eb5bb41636dc1cc4da7e208c851f26992d66c6aa6"
+      },
+      {
+        "file": "C1v6.ogg",
+        "bytes": 265156,
+        "sha256": "2a7a129be024a1fe0f35df75710a109c29ea137ca21201f9a7fec4b80169faca"
+      },
+      {
+        "file": "C2v6.ogg",
+        "bytes": 272786,
+        "sha256": "41d1212d3331b4d3e94904cb7fba7494c4cfaee622ca6d38c8bae6c277047df9"
+      },
+      {
+        "file": "C3v6.ogg",
+        "bytes": 198057,
+        "sha256": "88a060f6e3e9eaf9848e14f0923925dac9044bcd58352f1d6443381fa8f50dd4"
+      },
+      {
+        "file": "C4v6.ogg",
+        "bytes": 196921,
+        "sha256": "3ff1f25ebdd053bd8dfd235155a4a0725e37be7d8847bbeb106ff3e3b96e38de"
+      },
+      {
+        "file": "C5v6.ogg",
+        "bytes": 183821,
+        "sha256": "4dfd5a521975d9663044ae06f67829500fd8665bb000b0826e16950241fad9e5"
+      },
+      {
+        "file": "C6v6.ogg",
+        "bytes": 79909,
+        "sha256": "557de976340fa52e709959150fb1303fd06aceb9db4bd988b75534a9f5261d2c"
+      },
+      {
+        "file": "C7v6.ogg",
+        "bytes": 53212,
+        "sha256": "093f1990fdb093326bdc7c65754800866f721706053815de5269b4e7937c8688"
+      },
+      {
+        "file": "C8v6.ogg",
+        "bytes": 49603,
+        "sha256": "82130fc9909624124d7da742f5bfd7b4451e5b67b535d419eebdff98dd8c7357"
+      },
+      {
+        "file": "D#1v6.ogg",
+        "bytes": 282979,
+        "sha256": "487a98f667197453ed4b998c8d3b02bcec6a22fb99621272ddb6003e1b429b13"
+      },
+      {
+        "file": "D#2v6.ogg",
+        "bytes": 274084,
+        "sha256": "673face74a9be542196dacf68992126025eb374faadb43880b4884ccd754fb95"
+      },
+      {
+        "file": "D#3v6.ogg",
+        "bytes": 193428,
+        "sha256": "712992dffd4356a4a6f7fb5164585b863cd79c1aaba4475e87018b1ca24911b1"
+      },
+      {
+        "file": "D#4v6.ogg",
+        "bytes": 177707,
+        "sha256": "f3feaaf59de3fcffe513b8b85e413919842e00dc5f5ad76ea3618ae3ce6c25fd"
+      },
+      {
+        "file": "D#5v6.ogg",
+        "bytes": 146958,
+        "sha256": "c4a3b96df86330e24a6d599caa1e97caf415ef723461e6719042ae177da58188"
+      },
+      {
+        "file": "D#6v6.ogg",
+        "bytes": 86466,
+        "sha256": "45c9f3b860aba1c385c6ccbc33daed2b5cd2715a3f93f2395278b521c4108f1e"
+      },
+      {
+        "file": "D#7v6.ogg",
+        "bytes": 58399,
+        "sha256": "a95caf2f2aa8cd11a6da0ac967d40124c2fb4b26747aaf37b1b3e803a672863e"
+      },
+      {
+        "file": "F#1v6.ogg",
+        "bytes": 257181,
+        "sha256": "4b90bce2850eed5ea39a3286e46b3ea63fe0815bd6692d2b94b570699ec0be22"
+      },
+      {
+        "file": "F#2v6.ogg",
+        "bytes": 257552,
+        "sha256": "8ee2ee6a98e782b60faf85c050dfc6a37460fe6ef612dcc16b73e402aea0272c"
+      },
+      {
+        "file": "F#3v6.ogg",
+        "bytes": 199177,
+        "sha256": "5eb8d0fb06d7f45a59de4bdaff012600fac85fe8f1d80241de754c509e61dc94"
+      },
+      {
+        "file": "F#4v6.ogg",
+        "bytes": 169799,
+        "sha256": "ea95f8ef4388aeb81d2b40d62c9f6d594e8c2e9a724fa6747c8458cddf2968a0"
+      },
+      {
+        "file": "F#5v6.ogg",
+        "bytes": 142296,
+        "sha256": "99472fa2e4f9037d43724bb415dca0517a1d2b4b627194b6dd6457df757532b3"
+      },
+      {
+        "file": "F#6v6.ogg",
+        "bytes": 79160,
+        "sha256": "234a082dd4612c938b500a0c6551774dc2631e83a05671dd5034e1de37c0064b"
+      },
+      {
+        "file": "F#7v6.ogg",
+        "bytes": 63312,
+        "sha256": "43c9b1601cb417a32abef001a3fcf7162ea687d2f5504a740dc0cd66b429bf94"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity7",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity7/-/piano-velocity7-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v7.ogg",
+        "bytes": 290858,
+        "sha256": "9d776e66bda75e6d3ca7ecfdc8d5cf2936a3f580b262a4e9435d8f672d0708ec"
+      },
+      {
+        "file": "A1v7.ogg",
+        "bytes": 279567,
+        "sha256": "e27c406a74a3501acd1a4d57cbc7636e0c15d9ff53963795e46fe14f7a1135c1"
+      },
+      {
+        "file": "A2v7.ogg",
+        "bytes": 200714,
+        "sha256": "755ee0afc714437ada099ccaeb014214a84dda58e6e2a0fa5d72d62e5e4acb1a"
+      },
+      {
+        "file": "A3v7.ogg",
+        "bytes": 199995,
+        "sha256": "87ac199ccced8c93b67f6b012aaf2318691c7b993c27d2861c09e8e57f34f688"
+      },
+      {
+        "file": "A4v7.ogg",
+        "bytes": 165252,
+        "sha256": "ac796282f3094594ea8379fe4d8b95fe0d9b345b0bdd179a7974ff79bc21bfd7"
+      },
+      {
+        "file": "A5v7.ogg",
+        "bytes": 130596,
+        "sha256": "3e1cbfa3e00dcba90558ef7c9e056a31640610a250253851544259125ecbb34c"
+      },
+      {
+        "file": "A6v7.ogg",
+        "bytes": 82731,
+        "sha256": "5962a798349b0424395330abc36838650888ebd4183dd4f053dd6253c46d4da8"
+      },
+      {
+        "file": "A7v7.ogg",
+        "bytes": 44008,
+        "sha256": "a2b1adb13c7c9eafb096473cdc19bdd3ebc661c29dab37ef08b842a5ef1c3947"
+      },
+      {
+        "file": "C1v7.ogg",
+        "bytes": 263422,
+        "sha256": "ea6435d664f76592f8d0611184aaded61f9312be07983382c4716a1bf5fcd1f7"
+      },
+      {
+        "file": "C2v7.ogg",
+        "bytes": 272817,
+        "sha256": "edc69d755acd1b595fcc983e27698a2e369fc93072ff6c958b14767c32ec8588"
+      },
+      {
+        "file": "C3v7.ogg",
+        "bytes": 195146,
+        "sha256": "05f8a48edf6850b96d5dc440569495771442413eef64ca0cfbba999166eebb97"
+      },
+      {
+        "file": "C4v7.ogg",
+        "bytes": 194848,
+        "sha256": "1346cfdd9998ae7cc21b8043bbcce87b91b4ec3c71a35dbb9ff8f89c0622c05c"
+      },
+      {
+        "file": "C5v7.ogg",
+        "bytes": 184985,
+        "sha256": "f71c1b74b4efc865fcbb5e29830cfd3218b890b3599296b079fad6e21a962061"
+      },
+      {
+        "file": "C6v7.ogg",
+        "bytes": 81965,
+        "sha256": "964fdbf9b250c9bcdcbb32d0c30aba2e1ae9046634a5393664f2aaf5f0d93d18"
+      },
+      {
+        "file": "C7v7.ogg",
+        "bytes": 55522,
+        "sha256": "9e34caebd67d52d020a2313da33b10c90fea12acf6dcbdbd7949777afdc876ab"
+      },
+      {
+        "file": "C8v7.ogg",
+        "bytes": 48460,
+        "sha256": "2d7358687b70e742ad65a8cc4b1ca287db0593cb7a1a5c4aa83e5890193e4bab"
+      },
+      {
+        "file": "D#1v7.ogg",
+        "bytes": 279112,
+        "sha256": "d2d4b9f1701afe8da1e042bb19123cf8319ef0ad52f06d8133e4a51dbc39ba83"
+      },
+      {
+        "file": "D#2v7.ogg",
+        "bytes": 274881,
+        "sha256": "9e7b24aca4a405b980e56e2c45c1ce5e3d09ca390fcb99431575f6f683d6fbe2"
+      },
+      {
+        "file": "D#3v7.ogg",
+        "bytes": 193885,
+        "sha256": "6984b00a78ccea7c129a5c3a8149079ae7eacf4c615935df198ab8a4bd21de75"
+      },
+      {
+        "file": "D#4v7.ogg",
+        "bytes": 181240,
+        "sha256": "5a2912303cee795de008df8aef13fe0989f8203a8e756b1368833d3ecd32f1a5"
+      },
+      {
+        "file": "D#5v7.ogg",
+        "bytes": 142330,
+        "sha256": "e126616b70faacc783dd6ca04598ea12ceb57e851d7904aab6ba61aefcfeb28c"
+      },
+      {
+        "file": "D#6v7.ogg",
+        "bytes": 88456,
+        "sha256": "303ff6589243e1b1671f6de933747ad10a15e4c2d7a883373f2a42b01a2af40c"
+      },
+      {
+        "file": "D#7v7.ogg",
+        "bytes": 59420,
+        "sha256": "24337d9983412bfbd2a17b68141bd8a6ed9790f634f3c1e0c4a06de0109d8fe7"
+      },
+      {
+        "file": "F#1v7.ogg",
+        "bytes": 256202,
+        "sha256": "8c182934d028994bcc076adb8f130581c8c0fe43cbb69454f4f5596948425291"
+      },
+      {
+        "file": "F#2v7.ogg",
+        "bytes": 253066,
+        "sha256": "d6c9e4d383603db84ea51627d5d76b2376b2127c88da1f922cca6aeda4af64b6"
+      },
+      {
+        "file": "F#3v7.ogg",
+        "bytes": 198195,
+        "sha256": "637072d4d36c7f469108eaca5a08d27a4626365989c99c603c46c09ba73dcef6"
+      },
+      {
+        "file": "F#4v7.ogg",
+        "bytes": 172810,
+        "sha256": "d50d8b569b6cdc1c5042bc234e29729455cf40618e31f10866ec7c5972d95244"
+      },
+      {
+        "file": "F#5v7.ogg",
+        "bytes": 143086,
+        "sha256": "781bccd9bccccf1fe6ee730dc9ff7db8200697e68437ebaadb456d69438c4119"
+      },
+      {
+        "file": "F#6v7.ogg",
+        "bytes": 80564,
+        "sha256": "53a8f35ab991026fd7d5850a9eaf3b6989834db146c95de6adfa68ff5c4a1491"
+      },
+      {
+        "file": "F#7v7.ogg",
+        "bytes": 64132,
+        "sha256": "630c1f2b46f2d144d6269dc895a84f681f274ec2d95f9fae95c1629bd9172304"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity8",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity8/-/piano-velocity8-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v8.ogg",
+        "bytes": 279972,
+        "sha256": "3d155e0d9ea2176cb2f5e3bc114f26c4518af609e7f876d347c59c3623b77828"
+      },
+      {
+        "file": "A1v8.ogg",
+        "bytes": 278949,
+        "sha256": "aaaf2b6a63eea1034ffd8abae40a40ee5016445664965e68b2ebf9bf237172c8"
+      },
+      {
+        "file": "A2v8.ogg",
+        "bytes": 200370,
+        "sha256": "098e2a5848ba9435ca1837253e0f2848c77b908aefd4f8fc82443729b0ecf6ce"
+      },
+      {
+        "file": "A3v8.ogg",
+        "bytes": 196358,
+        "sha256": "6347638258cdf4ba5c99d90d7726708b0612eadee4f3a415fa61cb51c722d3af"
+      },
+      {
+        "file": "A4v8.ogg",
+        "bytes": 163395,
+        "sha256": "8a6e3ea98243fad806bae77ddd7dd4d08a9136d62291ec950a30091083da07f9"
+      },
+      {
+        "file": "A5v8.ogg",
+        "bytes": 132076,
+        "sha256": "7064beb6b213d9f0735c78729089a6c7a3def3567dba58726fc4c34fc38ff75a"
+      },
+      {
+        "file": "A6v8.ogg",
+        "bytes": 83666,
+        "sha256": "a3d1ef163d33831b09e1b0f99cfd8a3d7204a052542713889e4856576d2d3114"
+      },
+      {
+        "file": "A7v8.ogg",
+        "bytes": 49092,
+        "sha256": "6022f18ce831e364292da83861d9b382a4614b3e1ce963ea068d585fd8deb2dc"
+      },
+      {
+        "file": "C1v8.ogg",
+        "bytes": 261287,
+        "sha256": "c219c1cbeb6a90616f4876a0e7a0d364e2abde48e8b2dd7fa6901b33e680e598"
+      },
+      {
+        "file": "C2v8.ogg",
+        "bytes": 274107,
+        "sha256": "80af2088e4071cfdc3bb2c7d40c7ea1c16202231502e1e6ddb9c0e587a56ef85"
+      },
+      {
+        "file": "C3v8.ogg",
+        "bytes": 196602,
+        "sha256": "a768ecc807a36131ead7cb73c30c89e812274d2a14c03c765143268b1eed40c8"
+      },
+      {
+        "file": "C4v8.ogg",
+        "bytes": 201088,
+        "sha256": "a8e3af0f32e8d12b6d4cb59f43848a4a7acc4cb9186fdd75c7bf8ed5d1147ab6"
+      },
+      {
+        "file": "C5v8.ogg",
+        "bytes": 181623,
+        "sha256": "092df850b8959f17eb09ba5b69058ca0ba3b5739a70789def5268a28cd5aeadd"
+      },
+      {
+        "file": "C6v8.ogg",
+        "bytes": 82395,
+        "sha256": "a57c280342cbfda07de142e2a0626662e9f18b51de7cdef88670f416c7c1735f"
+      },
+      {
+        "file": "C7v8.ogg",
+        "bytes": 51876,
+        "sha256": "b0632accfce9af5a1abbcdb74931afc8a44af713a0af776182516ae604a13bf0"
+      },
+      {
+        "file": "C8v8.ogg",
+        "bytes": 52160,
+        "sha256": "04f05ed4b0edec50d08ca529290e89a28477744625b01e275bc89d1986b53fe2"
+      },
+      {
+        "file": "D#1v8.ogg",
+        "bytes": 282725,
+        "sha256": "208b39d9cce5dc39cbbf7aa2e0000647a9959af9787c615bc7d9a59c988fa428"
+      },
+      {
+        "file": "D#2v8.ogg",
+        "bytes": 272644,
+        "sha256": "2525436d82153e8c30a79792a0da6f69e1ed7c5ee00129c23c7a288eeeaa5ce9"
+      },
+      {
+        "file": "D#3v8.ogg",
+        "bytes": 196220,
+        "sha256": "1572a50a9dbdcc11a0cd7707806c428a1faa47b240d2f9cfaeadc2fbed2f790a"
+      },
+      {
+        "file": "D#4v8.ogg",
+        "bytes": 190710,
+        "sha256": "d55c41b7351b6e98506f8a55d114324d2661ed56ba01a3a1925ef9ec954df459"
+      },
+      {
+        "file": "D#5v8.ogg",
+        "bytes": 146585,
+        "sha256": "da4852f8e44e59e0399d08a367067cb3532d02f4b78ca4a6e7677fb932078b2a"
+      },
+      {
+        "file": "D#6v8.ogg",
+        "bytes": 88729,
+        "sha256": "0c27bec1b29c5aa46e3ad59383aa4959629acd64c2bde0bf0f3fa43264d67288"
+      },
+      {
+        "file": "D#7v8.ogg",
+        "bytes": 60522,
+        "sha256": "a981b390876fe4be7011f33c1165d02ce32d86ef19184129d15327db08e3db0c"
+      },
+      {
+        "file": "F#1v8.ogg",
+        "bytes": 256178,
+        "sha256": "fe8f010612b2e80a6b2e874eae3883d1fcceafd473f3c3179da97d30c6c33356"
+      },
+      {
+        "file": "F#2v8.ogg",
+        "bytes": 254904,
+        "sha256": "cbbfb533c7280220699ed2d00d09297db2577754833d27ad44641536ada89538"
+      },
+      {
+        "file": "F#3v8.ogg",
+        "bytes": 198643,
+        "sha256": "215377a98d4538fbaf7d8d8027e29a362e7f7f55f8add2c425a563b54fc1ebfd"
+      },
+      {
+        "file": "F#4v8.ogg",
+        "bytes": 173735,
+        "sha256": "d8d462505820563b897903f320c9344f5fcd8381a596f3a51fd353c0380bf6ee"
+      },
+      {
+        "file": "F#5v8.ogg",
+        "bytes": 138975,
+        "sha256": "1b32e45f2017a29b64e9276b561464b11f47e6665f6e367ac1ece9679f44c543"
+      },
+      {
+        "file": "F#6v8.ogg",
+        "bytes": 76955,
+        "sha256": "2ab129beec61d71fe76229ae252dbfc636b7f7f948225975ecf23a726611441e"
+      },
+      {
+        "file": "F#7v8.ogg",
+        "bytes": 66670,
+        "sha256": "9d4c265fef1084a7b46cc6c13126b0bff20f7afb228eb0b65aaf197edd05fbb3"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity9",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity9/-/piano-velocity9-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v9.ogg",
+        "bytes": 284354,
+        "sha256": "9d5709b0607d44dcb5795cc610bc4318bc1bd1a5334ced350bf4d5ef2648d6be"
+      },
+      {
+        "file": "A1v9.ogg",
+        "bytes": 276984,
+        "sha256": "a09476fff05cd8cf426ea6875028c90cb82e501534c7a40557dbeedc5a8502d2"
+      },
+      {
+        "file": "A2v9.ogg",
+        "bytes": 204163,
+        "sha256": "0f513540e32fe27e6f196ae15ec3643734ccd373885e261e2d5933b294880b98"
+      },
+      {
+        "file": "A3v9.ogg",
+        "bytes": 196837,
+        "sha256": "5fe152d748b5d3c0ce9b89d6675ca60f87c712032bf631ae00013c071e328072"
+      },
+      {
+        "file": "A4v9.ogg",
+        "bytes": 166625,
+        "sha256": "a54b68bbe2a75f8bd16a77d566a2605f4f4e86a10296e4b9c1e438e1a5af32ef"
+      },
+      {
+        "file": "A5v9.ogg",
+        "bytes": 131582,
+        "sha256": "f319f270f22644fd0724c323f3e2d4f148f2a9c93e8ffa758c72733f58842743"
+      },
+      {
+        "file": "A6v9.ogg",
+        "bytes": 82108,
+        "sha256": "7992301c4b675cb98c52ac6dd2b393d88fdfb99350cf7a906a586bea2ffb4763"
+      },
+      {
+        "file": "A7v9.ogg",
+        "bytes": 45087,
+        "sha256": "6928204b7afca78dc2b210d07101e670a394594378026f139317d3e7638e3bf0"
+      },
+      {
+        "file": "C1v9.ogg",
+        "bytes": 258488,
+        "sha256": "633350d66c32e8ed9395413c073f1bd6f49ee7c28c1f4a47e6892cb93d0cbb6f"
+      },
+      {
+        "file": "C2v9.ogg",
+        "bytes": 274099,
+        "sha256": "bf6a89e08769aebf3bbc029286ac95d680036e9af6cb49194e0986a7566fb29c"
+      },
+      {
+        "file": "C3v9.ogg",
+        "bytes": 197608,
+        "sha256": "bc49b92c5f217a4585dc4a997a46cd552d78edb3b4f5ed3f912e7c29975877b4"
+      },
+      {
+        "file": "C4v9.ogg",
+        "bytes": 195399,
+        "sha256": "eee01dec3198522a97ef1ee7b76847c862a8e746529c99429804b40c8098f777"
+      },
+      {
+        "file": "C5v9.ogg",
+        "bytes": 184208,
+        "sha256": "eb45490dc45681f4d29763fddf55a187ee3594c3c34184416eb13b112a52cb57"
+      },
+      {
+        "file": "C6v9.ogg",
+        "bytes": 80154,
+        "sha256": "9d2b8a98c4fceb132fd4a3fa1f2a4befe89336f2822f308105bff9c02024a1c8"
+      },
+      {
+        "file": "C7v9.ogg",
+        "bytes": 51945,
+        "sha256": "2f09acaede168811d3dbf4f546f259479bcade20e9b2585066f9d794929e74a4"
+      },
+      {
+        "file": "C8v9.ogg",
+        "bytes": 51624,
+        "sha256": "317104f5ffac19f5295fccd49a0e24529cef6cf5fe9e6f503c365a7842ea1c42"
+      },
+      {
+        "file": "D#1v9.ogg",
+        "bytes": 281747,
+        "sha256": "50a4b9d73cb1e024bba7479a7bd895178e2c65b5950e5aa613cad996355d58dc"
+      },
+      {
+        "file": "D#2v9.ogg",
+        "bytes": 272015,
+        "sha256": "dfc95352b62918776284905185ab451e9893140593f840482faaa61d114549d4"
+      },
+      {
+        "file": "D#3v9.ogg",
+        "bytes": 196004,
+        "sha256": "f12e97a06ae7b1cf74e058d46308ea62f454195d8cb34627cf354715d2d50b0d"
+      },
+      {
+        "file": "D#4v9.ogg",
+        "bytes": 181668,
+        "sha256": "504633a7c996e723deda0509110abd1330b66b8ab7923fccbf308e20fd395f32"
+      },
+      {
+        "file": "D#5v9.ogg",
+        "bytes": 149056,
+        "sha256": "0d83879b9788322055a07a4b6d18799b6bbe9830907587fbb0698c07eb8d3d01"
+      },
+      {
+        "file": "D#6v9.ogg",
+        "bytes": 88011,
+        "sha256": "72863e2b8c822ee709ddeb58ed41d1ac75ebbf432d4703f5ea1a48435781e739"
+      },
+      {
+        "file": "D#7v9.ogg",
+        "bytes": 59569,
+        "sha256": "8e7859ed7c55d397f64768c4f9224a99b65572adf54e18ad6580051c1ae970f9"
+      },
+      {
+        "file": "F#1v9.ogg",
+        "bytes": 255450,
+        "sha256": "57f0e443855f826642f5b66e3bb7a87eeb2b3d5ee510eeaf0de72cb7589fe073"
+      },
+      {
+        "file": "F#2v9.ogg",
+        "bytes": 254574,
+        "sha256": "9dfbe357bf397faca2db0c7d52d34c8d3de6d90c35e6535136e479bd10b5735b"
+      },
+      {
+        "file": "F#3v9.ogg",
+        "bytes": 200312,
+        "sha256": "70db5e4d0ee99b7b94827b3c6f3bcf8c90ae2d0c78de5d752041a1e2d3e0c1b0"
+      },
+      {
+        "file": "F#4v9.ogg",
+        "bytes": 175092,
+        "sha256": "13f4d03243985486e28a709042b20294c94fb6d0b630c20a773d00ab036f5b1a"
+      },
+      {
+        "file": "F#5v9.ogg",
+        "bytes": 139969,
+        "sha256": "a450a36ec9dddb68ac7a0aac888c15df3d28e016e4fe8ce8e344125d034d9dc0"
+      },
+      {
+        "file": "F#6v9.ogg",
+        "bytes": 77104,
+        "sha256": "cbe6c2e187f65efdd730a4e58d969d7d7639df4aa2ac262270351aebb3ae2372"
+      },
+      {
+        "file": "F#7v9.ogg",
+        "bytes": 62119,
+        "sha256": "84006e76724e1ae97356f389953fa51ec3e93c42ad5f5d08094452a9f358a818"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity10",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity10/-/piano-velocity10-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v10.ogg",
+        "bytes": 289269,
+        "sha256": "61a9521337c9fbe02cfe4d37a008b8b14067824f5cf69a9fd467b67466b2f879"
+      },
+      {
+        "file": "A1v10.ogg",
+        "bytes": 280309,
+        "sha256": "4803e2e8e750082a7045b9951b71d82428686883f3bceda0f6024cd063404722"
+      },
+      {
+        "file": "A2v10.ogg",
+        "bytes": 202259,
+        "sha256": "875b12dabfb4c919acf084b48eb63f5434b284b366184a9d7d6f4cf66a7bffe5"
+      },
+      {
+        "file": "A3v10.ogg",
+        "bytes": 192199,
+        "sha256": "19691e2ca31d52c7394f19764cedee63c5006706350f0a5d8a9c9b755b88a054"
+      },
+      {
+        "file": "A4v10.ogg",
+        "bytes": 170348,
+        "sha256": "6507b1c3c707a0a009ea0419b9847a28ecd97a4b578e1acf23b51a0afe0ceace"
+      },
+      {
+        "file": "A5v10.ogg",
+        "bytes": 132316,
+        "sha256": "ae0d00d5d17e1d1855a7a0829bcbe1ec554f26910f8fb48edf617d07f54d71f0"
+      },
+      {
+        "file": "A6v10.ogg",
+        "bytes": 82915,
+        "sha256": "3f25cb247f80bf1c5ababe0b88cae9e3aa4a655739fff617822fb79186504cfb"
+      },
+      {
+        "file": "A7v10.ogg",
+        "bytes": 47467,
+        "sha256": "c4764461a4588ac1ce028abd80cf47d89acd0541454c1793589e33a7c1d34bdc"
+      },
+      {
+        "file": "C1v10.ogg",
+        "bytes": 260069,
+        "sha256": "c8f276b9769445f068e25724d940c534a03e3654516fe54e5f86d5b2863f0683"
+      },
+      {
+        "file": "C2v10.ogg",
+        "bytes": 273593,
+        "sha256": "ab69c8e5b97d9422242043531666366689ae3957f61f390ebcb98ea8eb48f268"
+      },
+      {
+        "file": "C3v10.ogg",
+        "bytes": 194966,
+        "sha256": "fb541f0aca477239b06f06e93074b0ecd47bdfac1680dfd79c479888afee087a"
+      },
+      {
+        "file": "C4v10.ogg",
+        "bytes": 200640,
+        "sha256": "ae6db4a8530f42ae7acbfba0dea55d9afdf0a708135d2a41879ca7a0b9198495"
+      },
+      {
+        "file": "C5v10.ogg",
+        "bytes": 183740,
+        "sha256": "5228552560f6abdbe722ee497db47b0c4ad9f8ab675d6f49b2f8925e55b08e78"
+      },
+      {
+        "file": "C6v10.ogg",
+        "bytes": 80105,
+        "sha256": "cbb737a3bee371a72d4ca33678c558894c925d7e2bcb3d66b5f7fcc6de051e17"
+      },
+      {
+        "file": "C7v10.ogg",
+        "bytes": 57483,
+        "sha256": "a154034bbba0c58608a6c90432369287ec74018cb9cb95cc58b3777eaf624810"
+      },
+      {
+        "file": "C8v10.ogg",
+        "bytes": 49945,
+        "sha256": "937b6c299a96979555415a2e0c2920f6426894e456c8cb951d915fde42abb6f6"
+      },
+      {
+        "file": "D#1v10.ogg",
+        "bytes": 277323,
+        "sha256": "7ddd36b288a2343e9d567a9ab8f1239327273bd39e50df7f3d3f6cc72cbd2596"
+      },
+      {
+        "file": "D#2v10.ogg",
+        "bytes": 275153,
+        "sha256": "035c5408ab4be61e193d63cb69adf87e7b82aea232d1b2c073a9fab6313c918a"
+      },
+      {
+        "file": "D#3v10.ogg",
+        "bytes": 199416,
+        "sha256": "3b32f95bc8cf4b907e2eb281153e2b318829fc4da4bb680f766dace056163b67"
+      },
+      {
+        "file": "D#4v10.ogg",
+        "bytes": 177972,
+        "sha256": "79377b5fb70ad82da70d8f9aaeb6cd9131caf65fdc023116cad1e64e7dc43d25"
+      },
+      {
+        "file": "D#5v10.ogg",
+        "bytes": 147102,
+        "sha256": "1f834256d1da6ca80e647f8a9a94d49fdd607bfaeaae518398e143671c7be4f1"
+      },
+      {
+        "file": "D#6v10.ogg",
+        "bytes": 88388,
+        "sha256": "7690e19bfa7f3c2c417a4d97c6a84c4de56088b929e9ebf36b9ee7c9b5cb0410"
+      },
+      {
+        "file": "D#7v10.ogg",
+        "bytes": 60975,
+        "sha256": "8032e333f1ac62b31ab29026c104c0409751fc571e7692ad22607ae481023530"
+      },
+      {
+        "file": "F#1v10.ogg",
+        "bytes": 254851,
+        "sha256": "ee32019fa4811839ef993da3261268d9cf91a229b4a92823b74a562b21dc5209"
+      },
+      {
+        "file": "F#2v10.ogg",
+        "bytes": 253576,
+        "sha256": "d24bd96708d7b89f0f1a1aec3c3902aaae6aeb677c2ee0d9dc0e1de997f82859"
+      },
+      {
+        "file": "F#3v10.ogg",
+        "bytes": 200005,
+        "sha256": "9f14b133da3b73ba16d76d6fa01431dca5933bba7dc6ccd4a0ef9cf888d7265d"
+      },
+      {
+        "file": "F#4v10.ogg",
+        "bytes": 171829,
+        "sha256": "a52e72f1153d52934a75b2c154031eba4b74cfe4d07412482010e3c0a122823d"
+      },
+      {
+        "file": "F#5v10.ogg",
+        "bytes": 135844,
+        "sha256": "199b37af2571cad6d65339e76091aedf96ea9dc00d3bab3de53916ca44da8f1f"
+      },
+      {
+        "file": "F#6v10.ogg",
+        "bytes": 80917,
+        "sha256": "9b569ea32b3e1c8b3a77958282655d9f7ff8547122f13a912b4af42471f6bf2f"
+      },
+      {
+        "file": "F#7v10.ogg",
+        "bytes": 65606,
+        "sha256": "6f7a1092e655ebe3bd850a931dc91ffa969bede5f1acf092e2ace6428e398677"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity11",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity11/-/piano-velocity11-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v11.ogg",
+        "bytes": 281388,
+        "sha256": "c988988a5a1ddf317967f77b0101d3edb4ac8d44241abd351bfd08e089a1a456"
+      },
+      {
+        "file": "A1v11.ogg",
+        "bytes": 276455,
+        "sha256": "3a992566bd82f253a198bc953d13aee7ee5d33b82e7e551afe02984dc7070156"
+      },
+      {
+        "file": "A2v11.ogg",
+        "bytes": 200618,
+        "sha256": "1b9974542a63ab38a2ab76606d0a554c376380de10b23257cf9f49dae49b24f0"
+      },
+      {
+        "file": "A3v11.ogg",
+        "bytes": 194353,
+        "sha256": "5b8868a9e6c6ef6671d6f3376624f1e6120de12321b82217b000ae207b52da9c"
+      },
+      {
+        "file": "A4v11.ogg",
+        "bytes": 170228,
+        "sha256": "538c09c194f066bf7bd5084d341a8404769b7c4d3b2182e7b6a5fb08128a725c"
+      },
+      {
+        "file": "A5v11.ogg",
+        "bytes": 129668,
+        "sha256": "ebcabe193992bb38057d06a6eac90331ecae20abcf183447dd699891cc4a510b"
+      },
+      {
+        "file": "A6v11.ogg",
+        "bytes": 80147,
+        "sha256": "d5513c53799221d2b590ebcd5514d8507c9f9130711edd183c6492949197b6ea"
+      },
+      {
+        "file": "A7v11.ogg",
+        "bytes": 47085,
+        "sha256": "ce75450525741a3a98b90856eba01c9025f536b366820d60e54a442ab7af8214"
+      },
+      {
+        "file": "C1v11.ogg",
+        "bytes": 259002,
+        "sha256": "c8d96d824f73495b1f292cc734f3126b5752b2809a9b3a34827e2c450450b1ff"
+      },
+      {
+        "file": "C2v11.ogg",
+        "bytes": 274814,
+        "sha256": "fb6838d9e30bbd249967dfe21c88329a2a47c866e86a4d016d829d91cb276433"
+      },
+      {
+        "file": "C3v11.ogg",
+        "bytes": 196623,
+        "sha256": "304aea733ad0b7986c8ecac7d5b0d37671c88edb816cad8a3796faab53d46253"
+      },
+      {
+        "file": "C4v11.ogg",
+        "bytes": 203113,
+        "sha256": "3fbe7f4380be74a213daf10cd346fd22452f3c79d4d8218682ce7b99e3f2c6a4"
+      },
+      {
+        "file": "C5v11.ogg",
+        "bytes": 172420,
+        "sha256": "f36306f21b9ee72a1ac647512a0e398ccec37e896c3c3bfd6faa54206091fd86"
+      },
+      {
+        "file": "C6v11.ogg",
+        "bytes": 82954,
+        "sha256": "ab988642ddad3bc9aa63c346f2a80f28366684fe923f9f20842755004f478301"
+      },
+      {
+        "file": "C7v11.ogg",
+        "bytes": 55312,
+        "sha256": "c5b3ef41e76700b9bb1d34e95278d60c66a2fded49604cc8f79fb5b0317be7ae"
+      },
+      {
+        "file": "C8v11.ogg",
+        "bytes": 51965,
+        "sha256": "b78a600054f555381e8a115092f75c834416d4d6d539aea39b6acbb744a18ba7"
+      },
+      {
+        "file": "D#1v11.ogg",
+        "bytes": 279235,
+        "sha256": "8b6f3d27b8647c5ac19f953e3e1e40dd9045fd43ff9f2dc4d0b1d973c9407f16"
+      },
+      {
+        "file": "D#2v11.ogg",
+        "bytes": 270424,
+        "sha256": "596989c1aa545d6cfa43ef0e6801a3899845a1cdf93ecb26e9d702eb395b54ca"
+      },
+      {
+        "file": "D#3v11.ogg",
+        "bytes": 199741,
+        "sha256": "9dada764488c0ad1fbe3990f72740a22e9c35c23cbf1f4d25c10505aada87121"
+      },
+      {
+        "file": "D#4v11.ogg",
+        "bytes": 179981,
+        "sha256": "5071adcc8553edd15e6aabc227d1416de837e5929c3092ac78f87ad2e5731bcd"
+      },
+      {
+        "file": "D#5v11.ogg",
+        "bytes": 150785,
+        "sha256": "82142c47cfd2546d1f9c330d698bf69cee5e33c69d969d9810e8be56b000547b"
+      },
+      {
+        "file": "D#6v11.ogg",
+        "bytes": 91232,
+        "sha256": "d8ef6bee6a35705a20db068fe859ae2ac50078f1c995a841c768c26180a6642f"
+      },
+      {
+        "file": "D#7v11.ogg",
+        "bytes": 63841,
+        "sha256": "0920206f4abe763461d31fc87caa81413b331b8e286a76ca15725b3f847c7e4c"
+      },
+      {
+        "file": "F#1v11.ogg",
+        "bytes": 255967,
+        "sha256": "b4e9f89796194beaa9c11796fc00b113dd547577a77618b9d524ed054a1b96df"
+      },
+      {
+        "file": "F#2v11.ogg",
+        "bytes": 256940,
+        "sha256": "4c897c7bce7ec6127344e8cbcf20bb1782266586f74ac92ef7ead5d203220c57"
+      },
+      {
+        "file": "F#3v11.ogg",
+        "bytes": 197606,
+        "sha256": "1058078f84adad50b41d88788cba4e581ca57f093d3d04f95462fe195e4e9057"
+      },
+      {
+        "file": "F#4v11.ogg",
+        "bytes": 169588,
+        "sha256": "24ac1910127a4df6b74ba7adaf61152147f6f282a0c74474bc8185c89d60e497"
+      },
+      {
+        "file": "F#5v11.ogg",
+        "bytes": 137037,
+        "sha256": "d8caabc39acd8e9a0f6bf6f15e968513c189afc7efe033f93e6e3a3536293cea"
+      },
+      {
+        "file": "F#6v11.ogg",
+        "bytes": 78245,
+        "sha256": "3e98102cb8bc007436188105ba8ef0de599b8bcb8bf1d4214a508de6663a022d"
+      },
+      {
+        "file": "F#7v11.ogg",
+        "bytes": 67228,
+        "sha256": "63470e2a34718e38f4c07da828a3742af95de2e3330bed580c7f81107147f2d3"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity12",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity12/-/piano-velocity12-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v12.ogg",
+        "bytes": 286641,
+        "sha256": "c89dd8eb5bca6c5c003cb8c6174e46d6d814c997cde90752c3bbf82b3cf116d0"
+      },
+      {
+        "file": "A1v12.ogg",
+        "bytes": 277784,
+        "sha256": "466c1ba5a122cc28f2d195d166fcca3c7088ab2ea8b3162f90aa50a78939bec5"
+      },
+      {
+        "file": "A2v12.ogg",
+        "bytes": 203925,
+        "sha256": "cbc6ff66de4fcb1ddada2bc64a0b89ce703a1fcd736358a1181e72822920900f"
+      },
+      {
+        "file": "A3v12.ogg",
+        "bytes": 193957,
+        "sha256": "dccc45f7b55236d5bea69d04b4e2da91293eb2b7fd3efd0ddcaf244828473346"
+      },
+      {
+        "file": "A4v12.ogg",
+        "bytes": 169805,
+        "sha256": "869b4f6220da79185f7e6ca8d4b896177a163939f71a0c5774ee0a93712ea5c7"
+      },
+      {
+        "file": "A5v12.ogg",
+        "bytes": 130073,
+        "sha256": "0454519b22b048c54d60334f56dbced6a81ab2141e8403fa33fd5df4d6282c19"
+      },
+      {
+        "file": "A6v12.ogg",
+        "bytes": 82533,
+        "sha256": "5dd0ac6b7443d16fae98219a665ee018d3e1a4b755952f34421ae33248586e5a"
+      },
+      {
+        "file": "A7v12.ogg",
+        "bytes": 46828,
+        "sha256": "abf557735cdd93802f489229f8de63f2d95cb93d959b4e59193f6f41854e1708"
+      },
+      {
+        "file": "C1v12.ogg",
+        "bytes": 257470,
+        "sha256": "c1593e6355745bd905c14be0d23aa62301991b880036f0653b15767188218f48"
+      },
+      {
+        "file": "C2v12.ogg",
+        "bytes": 275050,
+        "sha256": "3c3c364907d0673faf6f54fb3d7600cb2c7361b82804a34f5356aa4ef36c0a66"
+      },
+      {
+        "file": "C3v12.ogg",
+        "bytes": 195150,
+        "sha256": "1e60b5a82deefcc3f270fc7b9d66e2a244166725c36496cf352f8aaa75aa589c"
+      },
+      {
+        "file": "C4v12.ogg",
+        "bytes": 197521,
+        "sha256": "72c0a8a153bab9cdf8164ee4bae54e75b45be0b899f1c05288b54670a774b3b5"
+      },
+      {
+        "file": "C5v12.ogg",
+        "bytes": 180925,
+        "sha256": "087e35b7fef25da72392d4f7117df7eb959bd2e69de53df0790971de8b0e822d"
+      },
+      {
+        "file": "C6v12.ogg",
+        "bytes": 82458,
+        "sha256": "ea3bb103566520961454b3ceb44509ebe7193cc629d86797483aba61491ba90c"
+      },
+      {
+        "file": "C7v12.ogg",
+        "bytes": 56873,
+        "sha256": "4f41bb7b07cc83c078ae10a359b09665ac211da91bb567ba3e48dea9ea0dc5df"
+      },
+      {
+        "file": "C8v12.ogg",
+        "bytes": 48436,
+        "sha256": "f5f0d2a1d2a326d132dba0a9491969b4a7d4ffa046c739a50c6ae075b4d3962d"
+      },
+      {
+        "file": "D#1v12.ogg",
+        "bytes": 276817,
+        "sha256": "9bc8cd2aa76a84cc00ac7d2fd26ac52bfc7d80c3f4451307a43d6357e09cf259"
+      },
+      {
+        "file": "D#2v12.ogg",
+        "bytes": 270949,
+        "sha256": "48a907d8732d4e13e9c7d8c79d628ae44415875dd0c626e40b6ec9440f966297"
+      },
+      {
+        "file": "D#3v12.ogg",
+        "bytes": 194275,
+        "sha256": "17c8ec6265802a20000b458426dfe3d72bd9f1c8ef33cb10c78d6f19aa5e1459"
+      },
+      {
+        "file": "D#4v12.ogg",
+        "bytes": 187983,
+        "sha256": "3a07cf94e1e9b287adc814da5397f3698e4d5183df4e095974d2c1a5fe26c5bc"
+      },
+      {
+        "file": "D#5v12.ogg",
+        "bytes": 151314,
+        "sha256": "081082da96a48b21fccfc2f1228d38942f75a8db550fc605c6164509ee26c9e5"
+      },
+      {
+        "file": "D#6v12.ogg",
+        "bytes": 90053,
+        "sha256": "de70e58ceaac99064f6e79a50ac3aeae77e780d6bbccf0e1185c690b0a63f65b"
+      },
+      {
+        "file": "D#7v12.ogg",
+        "bytes": 63128,
+        "sha256": "fbc3dbbc9f345970107f2ddda7cf40985e44a5f97c1a805aec494eb21756bed9"
+      },
+      {
+        "file": "F#1v12.ogg",
+        "bytes": 254601,
+        "sha256": "9035963612ba3e4b7ddabed6a9f21ccc49e2cfd9a1ec09b9ce8e4d773f5d2339"
+      },
+      {
+        "file": "F#2v12.ogg",
+        "bytes": 254944,
+        "sha256": "aa128ba1c16de19eb623ac1561882f0750bf5a008e30cd12f6ff07635533e765"
+      },
+      {
+        "file": "F#3v12.ogg",
+        "bytes": 198140,
+        "sha256": "0b951825e976428493130b573d65b77cb0d8ec34c0773324412e94aab210ea9e"
+      },
+      {
+        "file": "F#4v12.ogg",
+        "bytes": 177797,
+        "sha256": "3dece8d2f128bfb3e9ce720fd8f31bcc5d2e4decef42567266ecd19cfb2230cc"
+      },
+      {
+        "file": "F#5v12.ogg",
+        "bytes": 136978,
+        "sha256": "38e24c170619a5395ffe9f3d2485ff2e5604d1d28263bdbe80b4acca042a2f3f"
+      },
+      {
+        "file": "F#6v12.ogg",
+        "bytes": 80008,
+        "sha256": "8365bbe16e1eb4f94459ff712ef689317af23d714bfb142f6bf0bd287e2cc2ed"
+      },
+      {
+        "file": "F#7v12.ogg",
+        "bytes": 66551,
+        "sha256": "facaceab052e38054c6c8fcb73a2f6de2e60539af91bb91c1cff0b8da8fe1ac0"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity13",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity13/-/piano-velocity13-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v13.ogg",
+        "bytes": 287416,
+        "sha256": "c43d69a23871bf796e5ebdb2f10114e4615a0f25b889aa238025b3a05d8db3b1"
+      },
+      {
+        "file": "A1v13.ogg",
+        "bytes": 280506,
+        "sha256": "eb3d5ed9a1cbae07662579e94eaac20d5f74c01d411f8e98f2a353a09535628b"
+      },
+      {
+        "file": "A2v13.ogg",
+        "bytes": 206383,
+        "sha256": "f015ccf8b688553a47b060eef26f28f412b8a0312eff45f0fef9094a95b5bbff"
+      },
+      {
+        "file": "A3v13.ogg",
+        "bytes": 195169,
+        "sha256": "7b98f1bce64b4929b7754e24d9e11f2cf10d20069d0abf927b4d2a881a170664"
+      },
+      {
+        "file": "A4v13.ogg",
+        "bytes": 171320,
+        "sha256": "19685e9754c3d1bcdef778ecf0f930f44f30052f787a6d0d977e1348f99c8603"
+      },
+      {
+        "file": "A5v13.ogg",
+        "bytes": 127415,
+        "sha256": "8ab7f2927de1949759834a390a61fb77d3194e5f3f829f3832e4db1077bd335e"
+      },
+      {
+        "file": "A6v13.ogg",
+        "bytes": 81096,
+        "sha256": "6b1f7dcbf9e50875a4cfbb5c91ed21a1fa7232aeff6d73d75b24305fdcd1553a"
+      },
+      {
+        "file": "A7v13.ogg",
+        "bytes": 47303,
+        "sha256": "4113f7f182c04877cf0e5e2da562076ca108677eb6d12cdc77ecf3bd5eee69f8"
+      },
+      {
+        "file": "C1v13.ogg",
+        "bytes": 256354,
+        "sha256": "c60c83ce8f5a4920148d6f365a565fc072d84385e51367275f3157582d4081e8"
+      },
+      {
+        "file": "C2v13.ogg",
+        "bytes": 274834,
+        "sha256": "700c9567610d629f35591464779aff03ea4b0b3ee4a8774d2fdf8f34ca22e0d1"
+      },
+      {
+        "file": "C3v13.ogg",
+        "bytes": 200306,
+        "sha256": "75fefa3312bc630172547186791af157968acf7636ed29e8965f5261e1e053df"
+      },
+      {
+        "file": "C4v13.ogg",
+        "bytes": 196057,
+        "sha256": "e7d57eb7462f2004bf619703fd689f7512dcf34df5461b9dcf0e547ee9c1d55d"
+      },
+      {
+        "file": "C5v13.ogg",
+        "bytes": 175371,
+        "sha256": "889e1b7291dd693fff4cf088220ea59e676bac59d9cdeeecd4c3ac190894522f"
+      },
+      {
+        "file": "C6v13.ogg",
+        "bytes": 80098,
+        "sha256": "6af2b070233016c53d4ea4dee77a20cc224d4a3af45e22bb0886ec2fe55b95ac"
+      },
+      {
+        "file": "C7v13.ogg",
+        "bytes": 57907,
+        "sha256": "9f98b823d803fca2a605ecaf54b25de2076b09181e521ce8f79438fa85e68a72"
+      },
+      {
+        "file": "C8v13.ogg",
+        "bytes": 53055,
+        "sha256": "d60ed61c8c703562cafb7970d16d5ba82f52b5ccf862204ece0cc1d1d7b00f1f"
+      },
+      {
+        "file": "D#1v13.ogg",
+        "bytes": 277964,
+        "sha256": "5dd746115dd95da8a18e0d6e2c594f5b4ccdd95486085d284e017ee3dcfb1a74"
+      },
+      {
+        "file": "D#2v13.ogg",
+        "bytes": 270932,
+        "sha256": "9c08141178f39e2f6229db28fa346074913201baf2ac082043c1bb583c650088"
+      },
+      {
+        "file": "D#3v13.ogg",
+        "bytes": 195904,
+        "sha256": "089a97e7a323443c272c9181bda48ddeabba7d90c68f5c712777d40278c2d071"
+      },
+      {
+        "file": "D#4v13.ogg",
+        "bytes": 190719,
+        "sha256": "06caa12edc03331b7a9667aa8cbb403ebcc10bbd82c5bb34155297118695a756"
+      },
+      {
+        "file": "D#5v13.ogg",
+        "bytes": 144649,
+        "sha256": "111bf44e6f249d7f8a2784eb53acd4c45413149d040954236a27ad6c3e1b84c8"
+      },
+      {
+        "file": "D#6v13.ogg",
+        "bytes": 89247,
+        "sha256": "8aeb626a4f5161fffc6286e08ab4d004830da6c6a786cdb58814335c5c2d3a90"
+      },
+      {
+        "file": "D#7v13.ogg",
+        "bytes": 59470,
+        "sha256": "759e9394838bae407dc222c3552a4ca348032c88edfb3126061f762c1e5c4d18"
+      },
+      {
+        "file": "F#1v13.ogg",
+        "bytes": 252604,
+        "sha256": "5e66710f7b21067f78b52e0df61f7abbc3028c6b2f902e60e153b91f737c9568"
+      },
+      {
+        "file": "F#2v13.ogg",
+        "bytes": 257884,
+        "sha256": "f2e33336a4a76261deee8674222a3af871355ee5831c7f96ae6557b8460a01f9"
+      },
+      {
+        "file": "F#3v13.ogg",
+        "bytes": 199269,
+        "sha256": "119c19212802e417ca88d306355efaa4adb16766db9a0629cef0e3da18c978e8"
+      },
+      {
+        "file": "F#4v13.ogg",
+        "bytes": 169653,
+        "sha256": "b4065c18709d2b478f58ba2d37bc1a1e1efd8061d76a03fbc12bf5ec28ec8415"
+      },
+      {
+        "file": "F#5v13.ogg",
+        "bytes": 134209,
+        "sha256": "bd0070ffeb9694a7af19367ef2747e07b5f15e092f9341281e9c44a08659db47"
+      },
+      {
+        "file": "F#6v13.ogg",
+        "bytes": 74388,
+        "sha256": "5785ddbf3270f71ee8b89619ebe9787f524c867feddd9ca8bb757b2e91077983"
+      },
+      {
+        "file": "F#7v13.ogg",
+        "bytes": 64776,
+        "sha256": "519dd9cfd3f7ef0d833a9131833db5f406e5b5074b6c212ef581051306ab5cf6"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity14",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity14/-/piano-velocity14-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v14.ogg",
+        "bytes": 277094,
+        "sha256": "64ea639aa29db3115a9c3aa9c913271be057aad11390bafeb3940e8ba23e2c1f"
+      },
+      {
+        "file": "A1v14.ogg",
+        "bytes": 279350,
+        "sha256": "71c7b654e54bb3eb611820f591094d9182203b2fd5437669d52ac40a083b1d59"
+      },
+      {
+        "file": "A2v14.ogg",
+        "bytes": 202723,
+        "sha256": "1cbab705c020034b6806d5d8b99f75dd1bf8da87dd0c440706ff676ec9e5d16e"
+      },
+      {
+        "file": "A3v14.ogg",
+        "bytes": 195159,
+        "sha256": "c71bf0666eebfce4e0f2cd67d827bb6eeb02df6e21ef5e95d209056fe0c5cbee"
+      },
+      {
+        "file": "A4v14.ogg",
+        "bytes": 171914,
+        "sha256": "a43358d6ed3d8427380342ba00699de096880f6492220243e76e25ce1f807742"
+      },
+      {
+        "file": "A5v14.ogg",
+        "bytes": 132761,
+        "sha256": "424c9f536cbf903f98bb0cf178299245da09da18095084c2df4e878492cc2e2f"
+      },
+      {
+        "file": "A6v14.ogg",
+        "bytes": 83294,
+        "sha256": "07feaf8e6176df7ccfeec2699158f39aa97c68f8cbb87846695df547b6a069ea"
+      },
+      {
+        "file": "A7v14.ogg",
+        "bytes": 44824,
+        "sha256": "1be2bb1629a040e4374e58ae82b33e3bdd05ad9e43c90009c59450c79ea84298"
+      },
+      {
+        "file": "C1v14.ogg",
+        "bytes": 257247,
+        "sha256": "2fd3cd362cf03844e17fb299bb379d4835a422b1eeec0d8808dcb26b201a8f1c"
+      },
+      {
+        "file": "C2v14.ogg",
+        "bytes": 275784,
+        "sha256": "d707572e1ac3a919cfe63e0a48353ecaadd364e719822bd4d70bb74658dcd398"
+      },
+      {
+        "file": "C3v14.ogg",
+        "bytes": 199202,
+        "sha256": "d3901beecb669c08347b37df6ee58a9337af7efae530a99fba6082bada094060"
+      },
+      {
+        "file": "C4v14.ogg",
+        "bytes": 196293,
+        "sha256": "64d326bc3b7215feaaba7628062256cc3c0806ff19b910d23470f2a3966505d4"
+      },
+      {
+        "file": "C5v14.ogg",
+        "bytes": 178185,
+        "sha256": "1b31d51fbf83c5c204f78c7c4f7c3187b8da5221848c413f3f994f9a42edf337"
+      },
+      {
+        "file": "C6v14.ogg",
+        "bytes": 79851,
+        "sha256": "002640be43df6b3f65ed5c94a6b8d3bbbfa3d31b0329f64d1f6c5bf77181f666"
+      },
+      {
+        "file": "C7v14.ogg",
+        "bytes": 52201,
+        "sha256": "fa9f79f67c6e2ff08b9c436c87b2b2fa94b812729595a79aabd5785f5f6a2d13"
+      },
+      {
+        "file": "C8v14.ogg",
+        "bytes": 54280,
+        "sha256": "7461d13a78a1f2dd14d3f88a915ea80337b4c6f93b4488356e66ef104332e921"
+      },
+      {
+        "file": "D#1v14.ogg",
+        "bytes": 277387,
+        "sha256": "5fa7f298d8459da12a3adc65970c963d23f080b8a16a4a50e9d615c1782ce067"
+      },
+      {
+        "file": "D#2v14.ogg",
+        "bytes": 270434,
+        "sha256": "f087509985d165907ae2f5ef37751a56286d433f02d3d38b3b3e986796f096b0"
+      },
+      {
+        "file": "D#3v14.ogg",
+        "bytes": 201304,
+        "sha256": "49e5fceabc21e451bc4c6103340b3a131ba59f9b002df7fb20b4a28cbbfeabc7"
+      },
+      {
+        "file": "D#4v14.ogg",
+        "bytes": 192204,
+        "sha256": "b30794bce72238d25514f50a274e91304f484aa428e161c9e4cd2edcbb0a2499"
+      },
+      {
+        "file": "D#5v14.ogg",
+        "bytes": 150613,
+        "sha256": "fdee857c961961579b70835aba2367659fc983abaa868f267f6134dcb068c5a3"
+      },
+      {
+        "file": "D#6v14.ogg",
+        "bytes": 86327,
+        "sha256": "4301f1afce2bd6e740375e89e5d025d7e578b31f8ec059d096707a868ff0fee4"
+      },
+      {
+        "file": "D#7v14.ogg",
+        "bytes": 60845,
+        "sha256": "df13f7e95a011ba9bf5b71f9fef9f7b02fa4232f26ba1cd0670d2069b1df7527"
+      },
+      {
+        "file": "F#1v14.ogg",
+        "bytes": 253114,
+        "sha256": "3dc7a2034abb1ad5e8dbd32def348d9adce8daedea594d8ade6a0666958ae4c3"
+      },
+      {
+        "file": "F#2v14.ogg",
+        "bytes": 257331,
+        "sha256": "3ff83c1e5dbd81424810c6c1ac4a361e24e52329b25175a75185924b3ae6d4ef"
+      },
+      {
+        "file": "F#3v14.ogg",
+        "bytes": 200447,
+        "sha256": "d6ae1227ae94fbb922afe228737a526e5a5ae3b1fac361839a0b178a00f97e54"
+      },
+      {
+        "file": "F#4v14.ogg",
+        "bytes": 177562,
+        "sha256": "f4372ca7b0e7e1d593e186828e0547d788b2e9d29954cb60503e7111141c626c"
+      },
+      {
+        "file": "F#5v14.ogg",
+        "bytes": 143307,
+        "sha256": "d89ffb443d6e83fa0c513133826f2c0dd7747935167754a8590c43f7978c6752"
+      },
+      {
+        "file": "F#6v14.ogg",
+        "bytes": 79570,
+        "sha256": "3deab073387e71fd40678ca62cd4b13a4b046bd23f2e4dd66d8a1345655fe04a"
+      },
+      {
+        "file": "F#7v14.ogg",
+        "bytes": 65786,
+        "sha256": "33a3e5251693339c576af0278f2c06ae90cd87a918f72ef5f2737207e6652362"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity15",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity15/-/piano-velocity15-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v15.ogg",
+        "bytes": 275482,
+        "sha256": "cac066c2431fa34766194e8cb7b17fca76faeedb1e69579c154d0eafe67bc13a"
+      },
+      {
+        "file": "A1v15.ogg",
+        "bytes": 281000,
+        "sha256": "2fa991f5b94e6ca0c73e07b0a89ad6ac471c2fad2637165d3d585a122a146e43"
+      },
+      {
+        "file": "A2v15.ogg",
+        "bytes": 207372,
+        "sha256": "12116c8b8f5c80eaf752698289971972579927b45405a7b129654366a04f191b"
+      },
+      {
+        "file": "A3v15.ogg",
+        "bytes": 200436,
+        "sha256": "f7cee3dc6b1512b90cd6a6d2c8d82633a95eff63c829f509877881284df63723"
+      },
+      {
+        "file": "A4v15.ogg",
+        "bytes": 177078,
+        "sha256": "fe345c2daf9cbc4c427ff82020f67ccdaa904f86f97fbe61321ebe5a07958da5"
+      },
+      {
+        "file": "A5v15.ogg",
+        "bytes": 127945,
+        "sha256": "5ef710a0251c5bdbeae8692628ba158ef92847688313c8ce2dc70cffd71a411d"
+      },
+      {
+        "file": "A6v15.ogg",
+        "bytes": 84195,
+        "sha256": "85ec72dbc8a34db8bd04f4e639a9aed53b682cd4e4aa37665123d480baa270a7"
+      },
+      {
+        "file": "A7v15.ogg",
+        "bytes": 45169,
+        "sha256": "97d0e6dc817b0846f5ce71e4c82495ebadb1b9edb89f4bf08799dd2ee1646790"
+      },
+      {
+        "file": "C1v15.ogg",
+        "bytes": 259361,
+        "sha256": "79ec6553fb2e5744e99218c87862dfe014ad5b92f01bb47d4957906f7aabe303"
+      },
+      {
+        "file": "C2v15.ogg",
+        "bytes": 276592,
+        "sha256": "aeb4f1388def2144262de8261565872228af5e17057bd4117a9c43408de1d248"
+      },
+      {
+        "file": "C3v15.ogg",
+        "bytes": 203525,
+        "sha256": "5a43202d627eebdf228b6ca56b806138ee8b39c1fd418ae5c6ad2405ccb47f6f"
+      },
+      {
+        "file": "C4v15.ogg",
+        "bytes": 201565,
+        "sha256": "a955223bc1b729a3e0f237cb0e7fa1f909706c2e4f3df74d8f87cc2030737419"
+      },
+      {
+        "file": "C5v15.ogg",
+        "bytes": 171472,
+        "sha256": "c1a88e42e403738bf68295a4259a5803615253c3ff46034d7880ca8e08731ac9"
+      },
+      {
+        "file": "C6v15.ogg",
+        "bytes": 81565,
+        "sha256": "d46682585a387d82bf6c375d94abc51635276c5dbacc490d5ea67ded608b37bc"
+      },
+      {
+        "file": "C7v15.ogg",
+        "bytes": 53997,
+        "sha256": "e8812c44a3a11dbe51a9c54ff6ff4b43ddc2a3260fb41314aa2f9bc934e5a2a3"
+      },
+      {
+        "file": "C8v15.ogg",
+        "bytes": 54223,
+        "sha256": "d00ce20e7ffc72755500c44ee189dcc07ff69f029090173b74adb5aeea1f5e3f"
+      },
+      {
+        "file": "D#1v15.ogg",
+        "bytes": 274449,
+        "sha256": "acace81d882623cf98a14c125a1e3e545d6393c6929686299f2daefe8df606c8"
+      },
+      {
+        "file": "D#2v15.ogg",
+        "bytes": 275702,
+        "sha256": "d5d4a7fb4c45279b927874a8df33193efe05bdb79577306bbcf58642abdde462"
+      },
+      {
+        "file": "D#3v15.ogg",
+        "bytes": 202149,
+        "sha256": "de95634377d35db05cb7ba5bb72062214166e26f61fb7140032e149c5c4e0d4c"
+      },
+      {
+        "file": "D#4v15.ogg",
+        "bytes": 182120,
+        "sha256": "a62635aee494bc5549fbc08bd14f33f8a804579faee9aca65abb21cc10fe8287"
+      },
+      {
+        "file": "D#5v15.ogg",
+        "bytes": 148882,
+        "sha256": "6f16dd1b1a074e992d878879b509c46f42c01f9c8005c6011b625fcc731a48d1"
+      },
+      {
+        "file": "D#6v15.ogg",
+        "bytes": 89763,
+        "sha256": "0e226e7ab17e95c3b243e322e73c61f7c928c5742084d6e97ae4d3e2fa47dbe9"
+      },
+      {
+        "file": "D#7v15.ogg",
+        "bytes": 64900,
+        "sha256": "93f7609b0539de53bf96aed1383c1b49f89b1a3f74bf4b97558fded3e0352913"
+      },
+      {
+        "file": "F#1v15.ogg",
+        "bytes": 252908,
+        "sha256": "42302b4974eb63d92f8a193af1478fcbe95202758e54150d1fc0ce0beed726d7"
+      },
+      {
+        "file": "F#2v15.ogg",
+        "bytes": 257427,
+        "sha256": "809a4459d4b8b9d33349adfa09357ee567b059d8c38419bc84b0fe87e52527eb"
+      },
+      {
+        "file": "F#3v15.ogg",
+        "bytes": 201562,
+        "sha256": "ad747acd56378adcc952afec3d0bee585b948cabb038038bebe4759d3032b588"
+      },
+      {
+        "file": "F#4v15.ogg",
+        "bytes": 174629,
+        "sha256": "ce488cbb01c31a24f9f2c8f3fa57a65c72f0fc79a8bb80aebc976accb175630c"
+      },
+      {
+        "file": "F#5v15.ogg",
+        "bytes": 139949,
+        "sha256": "e9aec49ddc1e386aabf876c146af6d19bb080cb734b80423c9e36389f5317cc8"
+      },
+      {
+        "file": "F#6v15.ogg",
+        "bytes": 75933,
+        "sha256": "02622ec007a3805b822299e7014d9e0475a4521a35286c4b63ea7ab871cc49ca"
+      },
+      {
+        "file": "F#7v15.ogg",
+        "bytes": 66437,
+        "sha256": "4674fd2c9c9625bb6a4ed5c204c4212ecb711b86c1e17378d9a93c8fc706d6d6"
+      }
+    ]
+  },
+  {
+    "package": "@audio-samples/piano-velocity16",
+    "version": "1.0.5",
+    "tarball": "https://registry.npmjs.org/@audio-samples/piano-velocity16/-/piano-velocity16-1.0.5.tgz",
+    "files": [
+      {
+        "file": "A0v16.ogg",
+        "bytes": 286686,
+        "sha256": "e4a2327629b96496d2c7e2ba9ec4ad10d975fe29cb7fe789f9f4855f6737f100"
+      },
+      {
+        "file": "A1v16.ogg",
+        "bytes": 287945,
+        "sha256": "f391213c5eddaf07cb06cb79af638eb2266370ee583cfc11a88e704e25ba7fca"
+      },
+      {
+        "file": "A2v16.ogg",
+        "bytes": 208613,
+        "sha256": "6488ec1ce6df7cb23e06114cd2a0b975e2253a311ccb57cc4219952d7fa3a808"
+      },
+      {
+        "file": "A3v16.ogg",
+        "bytes": 203205,
+        "sha256": "fc342e4101cfbc10819b847a123a61907d2d74cfdafcb32da50ed7fd0268b62f"
+      },
+      {
+        "file": "A4v16.ogg",
+        "bytes": 185411,
+        "sha256": "417eb0db77ed1134da788a53bb48c28aa03a6917e02d981f0e0547d81f15b51c"
+      },
+      {
+        "file": "A5v16.ogg",
+        "bytes": 131218,
+        "sha256": "eadd16b68f81b944659655378e47ba910b8e19a6c51e1893f101a5198639d062"
+      },
+      {
+        "file": "A6v16.ogg",
+        "bytes": 86303,
+        "sha256": "e72b8283386c464bc0a5c50d889ed88502494bae0f8742aec232cc1737798b01"
+      },
+      {
+        "file": "A7v16.ogg",
+        "bytes": 46861,
+        "sha256": "738a09767bcbe4e620ea2cbecd7074192ab847c9ba79db4472d712bf417a3f58"
+      },
+      {
+        "file": "C1v16.ogg",
+        "bytes": 253572,
+        "sha256": "1a1bbf8410ada75da0c4a6b3fdcd2b73b1a13a844efd2dbe4aade9e09a53c5b3"
+      },
+      {
+        "file": "C2v16.ogg",
+        "bytes": 277124,
+        "sha256": "7cdc30120afd1cf720286afa458bb154069ccedca9742cff7b33b697a5e8de7e"
+      },
+      {
+        "file": "C3v16.ogg",
+        "bytes": 204148,
+        "sha256": "401c8118d89f7ce4564617290ee8401b4bb3b91d0f7c5a8dbb1765aaae26106e"
+      },
+      {
+        "file": "C4v16.ogg",
+        "bytes": 195670,
+        "sha256": "1684dd5c68ce73d7f5f5dd51ff5b77adc4e572215ab2a61fb170cba4978c3fc9"
+      },
+      {
+        "file": "C5v16.ogg",
+        "bytes": 178350,
+        "sha256": "7a27a0722173882bf0dddfff8b28886ff4c1a7d56ec9c3850d56264d7a32dbce"
+      },
+      {
+        "file": "C6v16.ogg",
+        "bytes": 81834,
+        "sha256": "abb90bb114ea63b38d7a1a3dd23a94165ba925303ab9d8120bbb50cdfeb90242"
+      },
+      {
+        "file": "C7v16.ogg",
+        "bytes": 55896,
+        "sha256": "509e13e2dd81ba75f07a059173b8bd0d6cf775ec271a4bff8aa3ec8f5904cc73"
+      },
+      {
+        "file": "C8v16.ogg",
+        "bytes": 49677,
+        "sha256": "862dddf4157d90ae4e06b6f9db80b9c0af46b5c0ccc9e25cde82fa82ac1c8ce9"
+      },
+      {
+        "file": "D#1v16.ogg",
+        "bytes": 276380,
+        "sha256": "828bfdaf539f41af047d47e4e4280745bc1103c2a6edbb97720812ec50172b41"
+      },
+      {
+        "file": "D#2v16.ogg",
+        "bytes": 273790,
+        "sha256": "cb51179766309a15b80c7dcb094edbf7337c4680ad60cb4a648157f368384dd9"
+      },
+      {
+        "file": "D#3v16.ogg",
+        "bytes": 200938,
+        "sha256": "1af9af5cef53471ed86ce4d2f4d2557714b01d2cdf62468320da526e867e3b3c"
+      },
+      {
+        "file": "D#4v16.ogg",
+        "bytes": 180526,
+        "sha256": "23987bdb087fec9ff11ecb4fa9f36c4b4811e06f42b4a865f80edcee4e748365"
+      },
+      {
+        "file": "D#5v16.ogg",
+        "bytes": 156114,
+        "sha256": "40cbf16cfb7be15db57dfac63c3189bce80c56261a651c95bb4f13166c546d8f"
+      },
+      {
+        "file": "D#6v16.ogg",
+        "bytes": 85328,
+        "sha256": "b4fa2c69db4046c8b2d5babd240bd55900ba6b55fbbe5af225a46db76b0aafbc"
+      },
+      {
+        "file": "D#7v16.ogg",
+        "bytes": 66426,
+        "sha256": "13254fac74e837a646671ffbabfb890252914d005142c850ae3cba1f2c903594"
+      },
+      {
+        "file": "F#1v16.ogg",
+        "bytes": 251600,
+        "sha256": "5ad94afef84ccfc23804cf4b14710a77ce8b94243b4693ec7520fb58a2c1b588"
+      },
+      {
+        "file": "F#2v16.ogg",
+        "bytes": 261478,
+        "sha256": "c2fcaa779a3c5fe12a02e95a157b28fd6b35ba7709cba51fdb536d86958971be"
+      },
+      {
+        "file": "F#3v16.ogg",
+        "bytes": 196108,
+        "sha256": "7c46fca93adc814557090b09992376e7a022ffe259b8587b44c29469544af941"
+      },
+      {
+        "file": "F#4v16.ogg",
+        "bytes": 172504,
+        "sha256": "896c60c0e33927dd3c41d7f53234a25d3817373b8276e1da6ff2ee9344838b98"
+      },
+      {
+        "file": "F#5v16.ogg",
+        "bytes": 145327,
+        "sha256": "bc6efbba5b2a2590758a6a5c168c3c0e6f9a848c7e73e7c8d2c7060df5f8584e"
+      },
+      {
+        "file": "F#6v16.ogg",
+        "bytes": 78144,
+        "sha256": "15b1c0d2482d337d525f9b71d42f6075bc49ec87253d988fe068a47e1c873b78"
+      },
+      {
+        "file": "F#7v16.ogg",
+        "bytes": 63378,
+        "sha256": "55e988638e513d7ba9b84c6a1910236ecff4d81c5edbf9a68e4cf8d882136040"
+      }
+    ]
+  }
+]

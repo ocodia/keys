@@ -1,6 +1,6 @@
 # Keys — Piano Companion
 
-A no-build, local-first piano learning PWA inspired by [Axe](https://github.com/ocodia/axe). This is an independent implementation using native JavaScript modules, Web Components and Web Audio. No package installation, backend, account, CDN or network-based sound library is needed.
+A no-build, local-first piano learning PWA inspired by [Axe](https://github.com/ocodia/axe). This is an independent implementation using native JavaScript modules, Web Components and Web Audio. No package installation, backend, account or runtime CDN is needed. Acoustic piano recordings are bundled with the app.
 
 ## Run
 
@@ -35,13 +35,17 @@ Connect a USB MIDI keyboard, open **MIDI** in the header, click **Connect keyboa
 
 **Play MIDI notes through Keys** defaults on. Your saved on/off choice is preserved; turn it off for digital pianos with their own speakers if you hear doubled notes. Keys remembers the last selected input and automatically restores it when permission is already granted. If it is missing, Keys waits for it instead of silently switching to another keyboard. Unplug/replug reconnects the remembered device. Deselecting the input clears the remembered selection. Browsers without MIDI permission querying require a manual connection.
 
-Velocity, note-off, sustain CC64 and device disconnection are handled. Keys uses a small additive piano-like synthesiser, not acoustic piano samples. Automatic MIDI connection cannot bypass browser autoplay rules: click anywhere in Keys to unlock sound, or use **Enable sound** when shown. Stop, tab hiding, focus loss and input-device changes release all sound.
+Velocity, note-off, sustain CC64 and device disconnection are handled. Keys plays stereo Salamander Grand Piano V3 recordings of a Yamaha C5: 16 recorded velocity layers across 30 sampled pitches, covering all 88 keys with at most one semitone of transposition. Softer strikes use softer recordings; the natural attacks and long decays are preserved. Bass dampers release more slowly than treble dampers, the highest strings ring naturally, and repeated strikes overlap while the sustain pedal is down. Stop also silences undamped strings. A gentle peak compressor controls loud overlaps while preserving normal dynamics. Automatic MIDI connection cannot bypass browser autoplay rules: click anywhere in Keys to unlock sound, or use **Enable sound** when shown. Stop, tab hiding, focus loss and input-device changes release all sound.
+
+The piano uses 480 local Ogg recordings (about 76 MiB). The first interaction warms the visible keyboard at the onscreen playing velocity; other recordings load and decode as needed, so a first strike at a new pitch/velocity can take slightly longer. The keyboard shows **Grand piano · Loading…** during preparation. Playback sequences prepare their recordings before starting. Decoded samples use a 192 MiB LRU cache; active voices retain their buffers separately and polyphony, including release tails, is limited to 96 voices.
+
+Recordings are by **Alexander Holm**, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), using the Ogg conversions distributed by [darosh](https://github.com/darosh/samples-piano). See [sample credits and provenance](sounds/salamander/NOTICE.md). The current engine does not model sympathetic resonance, half-pedalling or mechanical pedal/release noises.
 
 If connected but silent, choose the keyboard's main **MIDI** input, not **MCU/HUI**, **DAW**, **ALV** or **DIN THRU**. Keys prefers a note-playing port automatically. **Test sound** checks browser output independently of the keyboard; the input indicator shows the most recent note received. Connect MIDI, enabling monitoring, and Test sound unlock browser audio through a user gesture.
 
 ## Install and offline use
 
-Allow the first load to finish before going offline. Install using the browser's install control or Keys' Install button when offered. Every runtime asset, including sounds (synthesised in code), is available offline. New versions wait for **Update when ready**; an update stops sound and reloads the app, so finish a quiz first.
+Allow the first load to finish before going offline. Install using the browser's install control or Keys' Install button when offered. The first installation caches the complete app and all piano recordings before becoming ready, so allow the roughly 76 MiB sound download to finish. Every runtime asset is then available offline. Recordings have a separate versioned cache and are reused across app-shell updates. New versions wait for **Update when ready**; an update stops sound and reloads the app, so finish a quiz first.
 
 Preferences, saved progressions and aggregate quiz statistics are stored under `keys:v1` in browser local storage. Active notes, connections and unfinished quizzes are not persisted. Clearing browser site data removes saved progress. No telemetry is collected.
 
@@ -55,6 +59,6 @@ For browser/component tests, serve the app and open **http://127.0.0.1:8765/test
 
 ## Static hosting
 
-The root folder can be served as-is from any HTTPS static host, including a GitHub Pages project subdirectory. Keep relative paths and deploy all runtime files and `icons/`. No deployment has been performed. For updates, bump the service-worker cache version whenever a cached runtime file changes.
+The root folder can be served as-is from any HTTPS static host, including a GitHub Pages project subdirectory. Keep relative paths and deploy all runtime files, `icons/`, `instruments/` and `sounds/`. No deployment has been performed. For updates, bump the service-worker cache version whenever a cached runtime file changes.
 
 See [architecture](docs/ARCHITECTURE.md) for module boundaries and extension instructions. Staff reading, songs, microphone recognition, rhythm grading, cloud sync and general-purpose fingering are outside this release.

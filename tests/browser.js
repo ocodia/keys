@@ -85,7 +85,7 @@ await test('Mobile layout contains page overflow while keyboard scrolls',async()
   const scroller=app.querySelector('.piano-scroll');assert(scroller.scrollWidth>scroller.clientWidth,'Keyboard should scroll at mobile width');iframe.style.width='1200px';
 });
 await test('Service worker caches the complete installable app shell',async()=>{
-  await iframe.contentWindow.navigator.serviceWorker.ready;const keys=await caches.keys();const name=keys.find(k=>k.startsWith('keys-')&&k.includes(location.origin));assert(name,'App cache absent');
+  await iframe.contentWindow.navigator.serviceWorker.ready;const keys=await caches.keys();const name=keys.find(k=>k.startsWith('keys-')&&k.includes(location.origin)&&!k.endsWith('salamander-v1'));assert(name,'App cache absent');
   const cache=await caches.open(name);for(const path of ['index.html','app.js','theory.js','panels.js','input-service.js','icons/keys-192.png','icons/keys-512.png'])assert(await cache.match(new URL('../'+path,location.href)),`Missing ${path}`);
 });
 app.input.stop();app.selection.clear();app.quiz=null;app.focusChord=null;app.answerSource='onscreen';app.store.update(JSON.parse(snapshot));

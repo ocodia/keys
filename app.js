@@ -18,7 +18,7 @@ export class KeysApp extends HTMLElement {
     <div class="workspace"><div class="learning-panel"><section class="controls-card" id="controls" aria-label="Tool settings"></section><section class="detail-card" id="details" aria-label="Practice content"></section></div><div class="instrument-column"><section class="instrument-card">
     <div class="instrument-tools"><button data-action="octave-down" aria-label="View lower octave">←</button><button data-action="octave-up" aria-label="View higher octave">→</button><label>View <select id="overview" data-field="keyCount" aria-label="Keyboard view"><option value="25">2 octaves</option><option value="49">49 keys</option><option value="61">61 keys</option><option value="88">88 keys</option></select></label><label>Labels <select data-field="labels" aria-label="Key labels"><option value="notes">Notes</option><option value="intervals">Intervals</option><option value="none">Hidden</option></select></label><label><select data-field="accidental" aria-label="Accidental display"><option value="sharps">♯ Sharps</option><option value="flats">♭ Flats</option></select></label></div>
     <piano-keyboard></piano-keyboard><div class="keyboard-footer"><span><span style="color:#b6c88e">●</span> Root / target &nbsp; <span style="color:var(--gold)">●</span> Your notes</span><span id="keyboard-hint">Click a key to play · Arrow keys to move</span></div>
-    <div class="instrument-tools transport"><button data-action="stop">■ Stop</button><button data-action="mute" id="mute" aria-label="Mute sound">Sound on</button><label>Volume <input data-field="volume" type="range" min="0" max="100" aria-label="Volume"></label><label>Tempo <input data-field="tempo" type="number" min="40" max="180" step="1" aria-label="Tempo in beats per minute" class="tempo-input"> BPM</label><span class="keyboard-meta" id="visible-range"></span></div></section>
+    <div class="instrument-tools transport"><span class="small" id="instrument-status" role="status">Grand piano</span><button data-action="stop">■ Stop</button><button data-action="mute" id="mute" aria-label="Mute sound">Sound on</button><label>Volume <input data-field="volume" type="range" min="0" max="100" aria-label="Volume"></label><label>Tempo <input data-field="tempo" type="number" min="40" max="180" step="1" aria-label="Tempo in beats per minute" class="tempo-input"> BPM</label><span class="keyboard-meta" id="visible-range"></span></div></section>
     </div></div></main>`;
     this.keyboard=this.querySelector('piano-keyboard');
     this.midiDialog=this.querySelector('dialog');
@@ -40,11 +40,19 @@ export class KeysApp extends HTMLElement {
     });
     this.audio.onHighlight=notes=>{this.playing=notes;this.refreshKeyboard();};
     this.audio.onError=e=>this.message(e.message);
+    this.audio.onLoadStatus=loading=>{this.querySelector('#instrument-status').textContent=loading?'Grand piano · Loading…':'Grand piano';};
     this.onVisibility=()=>{if(document.hidden)this.input.stop();};this.onBlur=()=>this.input.stop();
     document.addEventListener('visibilitychange',this.onVisibility);window.addEventListener('blur',this.onBlur);
     this.onInstall=e=>{e.preventDefault();this.installPrompt=e;this.querySelector('[data-action=install]').hidden=false;};
     window.addEventListener('beforeinstallprompt',this.onInstall);
-    this.onAudioGesture=()=>{if(this.midi.port&&this.state.monitor&&this.audio.context?.state!=='running')this.unlockAudio();};
+    this.onAudioGesture=()=>{
+      if(this.midi.port&&this.state.monitor&&this.audio.context?.state!=='running')this.unlockAudio();
+      if(!this.pianoWarmed){
+        this.pianoWarmed=true;
+        const start=this.keyboard.data.start,end=this.keyboard.data.end;
+        this.audio.prepare(Array.from({length:end-start+1},(_,i)=>start+i),.75).catch(error=>{this.pianoWarmed=false;this.message(error.message);});
+      }
+    };
     document.addEventListener('pointerdown',this.onAudioGesture);document.addEventListener('keydown',this.onAudioGesture);
     this.render();this.setupOffline();this.registerTools();this.midi.autoConnect();
   }
@@ -206,7 +214,7 @@ export class KeysApp extends HTMLElement {
   async unlockAudio(){
     const status=this.querySelector('#audio-status');
     status.textContent='Starting sound…';
-    try{await this.audio.ready();status.textContent='Sound ready. MIDI notes play when monitoring is enabled.';this.renderAudioPrompt();}
+    try{await this.audio.prepare([48,51,54,57,60,63,66,69,72],.75);status.textContent='Grand piano ready. MIDI notes play when monitoring is enabled.';this.renderAudioPrompt();}
     catch(error){status.textContent=error.message;}
   }
   message(text){const el=this.querySelector('#message');el.textContent=text;el.hidden=!text;}

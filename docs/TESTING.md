@@ -2,6 +2,10 @@
 
 ## Verified in this implementation
 
+Piano upgrade (11 September 2026): **21/21 core groups** and **33/33 core + browser groups** passed in Node and headless Microsoft Edge. `/tests/audio-render.html` additionally rendered real Web Audio graphs to check soft/hard dynamics, bass damping, undamped treble, panic and source cleanup. All **480** recordings decoded to non-silent stereo; the decoded cache stayed within its 192 MiB budget. With the browser network disabled, the app reloaded and played six pitches including A0/C8 and transposed notes; all 480 recordings were present in the offline cache. These checks verify signal output and lifecycle, not subjective listening quality or physical keyboard latency.
+
+The earlier app verification below is retained as historical context:
+
 - 15/15 core test groups passed under Node, including remembered MIDI input, permission-gated auto-connect, missing devices and hot replug.
 - 27/27 core + browser test groups passed in the Chromium-based in-app browser, including a fresh cache/origin run, navigation collapse/keyboard width, useful details preceding the keyboard in every mode, 49/61-key ranges and octave limits, mobile overflow and modal visibility/focus checks. Escape closing was also verified through browser controls.
 - Desktop rendering and first-inversion playback were exercised through real browser controls. The 390px iframe layout passed the overflow and piano-scroll checks.
@@ -14,7 +18,7 @@ Dedicated Chrome/Edge installation checks, physical mobile devices, multitouch a
 
 ## Automated core suite
 
-Run `node tests/run.js` (modern Node with ES modules and CustomEvent). Fifteen groups exercise:
+Run `node tests/run.js` (modern Node with ES modules and CustomEvent). Twenty-one groups exercise:
 
 - 88-key geometry and middle C, floating-point geometry tolerance.
 - Every scale and chord spelling in every supported root, including E#, B# and double flats.
@@ -25,6 +29,9 @@ Run `node tests/run.js` (modern Node with ES modules and CustomEvent). Fifteen g
 - Synthetic MIDI, sustain, repeated notes, separate input sources, permissions and hot unplug.
 - Quiz pitch-class/exact-register grading, reveal and duplicate submission.
 - Audio startup cancellation before an AudioContext resume completes.
+- All-key sample mapping and velocity layers; load deduplication, memory eviction and failure retry; pending-note cancellation, source-specific sustain, repeated pedalled strikes, release-tail polyphony and sequence cancellation.
+
+Open `/tests/audio-render.html` for the real audio verification. It decodes every recording (about 76 MiB compressed), renders damper/velocity checks in `OfflineAudioContext`, and exercises muted live-source cleanup. Browser autoplay must be allowed for its live-context check; run with `--autoplay-policy=no-user-gesture-required` in unattended Chromium. The ordinary browser suite continues to stub audible playback.
 
 ## Browser suite
 

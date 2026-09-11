@@ -3,6 +3,7 @@ import {Store,sanitize} from '../storage.js';
 import {InputRouter,decodeMidi,MidiInput,preferredMidiPort} from '../input-service.js';
 import {QuizSession,makeQuestions,evaluate} from '../quiz.js';
 import {PianoAudio,midiToFrequency} from '../audio-service.js';
+import {registerAudioTests} from './audio.js';
 export const assert=(condition,message='Assertion failed')=>{if(!condition)throw new Error(message);};
 export const equal=(actual,expected)=>assert(JSON.stringify(actual)===JSON.stringify(expected),`${JSON.stringify(actual)} ≠ ${JSON.stringify(expected)}`);
 export async function runCore(report=()=>{}){
@@ -116,6 +117,7 @@ export async function runCore(report=()=>{}){
     const audio=new PianoAudio(Context),pending=audio.on(60);audio.stop();resume();await pending;equal(audio.voices.size,0);
     const released=new PianoAudio(Context),note=released.on(60,.7,'test');released.off(60,'test');resume();await note;equal(released.voices.size,0);
   });
+  registerAudioTests(test,assert,equal);
   let failed=0;
   for(const t of tests){try{await t.run();report({name:t.name,passed:true});}catch(error){failed++;report({name:t.name,passed:false,error:error.message});}}
   return {total:tests.length,failed};
